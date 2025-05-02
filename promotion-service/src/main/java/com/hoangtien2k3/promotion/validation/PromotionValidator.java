@@ -3,35 +3,41 @@ package com.hoangtien2k3.promotion.validation;
 import com.hoangtien2k3.promotion.model.enumeration.DiscountType;
 import com.hoangtien2k3.promotion.model.enumeration.UsageType;
 import com.hoangtien2k3.promotion.viewmodel.PromotionDto;
-import liquibase.repackaged.org.apache.commons.collections4.CollectionUtils;
-
-import javax.validation.ConstraintValidator;
-import javax.validation.ConstraintValidatorContext;
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+import org.apache.commons.collections.CollectionUtils;
 
 public class PromotionValidator implements ConstraintValidator<PromotionConstraint, PromotionDto> {
 
-    private boolean isCreate;
-
     @Override
-    public void initialize(PromotionConstraint constraintAnnotation) {
-        ConstraintValidator.super.initialize(constraintAnnotation);
-    }
+    public boolean isValid(PromotionDto promotionDto, ConstraintValidatorContext context) {
+        if (promotionDto == null) return false;
 
-    @Override
-    public boolean isValid(PromotionDto promotionDto, ConstraintValidatorContext constraintValidatorContext) {
-        boolean isValid = true;
-        if (UsageType.LIMITED.equals(promotionDto.getUsageType())) {
-            isValid = promotionDto.getUsageLimit() > 0;
+        if (UsageType.LIMITED.equals(promotionDto.getUsageType()) && promotionDto.getUsageLimit() <= 0) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("Usage limit must be > 0 for LIMITED usage")
+                    .addPropertyNode("usageLimit").addConstraintViolation();
+            return false;
         }
 
-        isValid = isValid && isValidDiscountType(promotionDto);
+        if (!isValidDiscountType(promotionDto)) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("Invalid discount value")
+                    .addConstraintViolation();
+            return false;
+        }
 
-        isValid = isValid && isValidApplyToItems(promotionDto, isValid);
+        if (!isValidApplyToItems(promotionDto)) {
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("Relevant IDs (product/brand/category) must not be empty")
+                    .addConstraintViolation();
+            return false;
+        }
 
-        return isValid;
+        return true;
     }
 
-    private static boolean isValidDiscountType(PromotionDto promotion) {
+    private boolean isValidDiscountType(PromotionDto promotion) {
         if (DiscountType.FIXED.equals(promotion.getDiscountType())) {
             return promotion.getDiscountAmount() > 0;
         } else {
@@ -39,11 +45,11 @@ public class PromotionValidator implements ConstraintValidator<PromotionConstrai
         }
     }
 
-    private static boolean isValidApplyToItems(PromotionDto promotion, boolean isValid) {
+    private boolean isValidApplyToItems(PromotionDto promotion) {
         return switch (promotion.getApplyTo()) {
-            case PRODUCT -> isValid && CollectionUtils.isNotEmpty(promotion.getProductIds());
-            case BRAND -> isValid && CollectionUtils.isNotEmpty(promotion.getBrandIds());
-            case CATEGORY -> isValid && CollectionUtils.isNotEmpty(promotion.getCategoryIds());
+            case PRODUCT -> CollectionUtils.isNotEmpty(promotion.getProductIds());
+            case BRAND -> CollectionUtils.isNotEmpty(promotion.getBrandIds());
+            case CATEGORY -> CollectionUtils.isNotEmpty(promotion.getCategoryIds());
         };
     }
 }
