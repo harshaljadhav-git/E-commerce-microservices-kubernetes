@@ -12,8 +12,6 @@ RUN npm run build
 
 FROM nginx:1.23
 
-RUN rm /usr/share/nginx/html/index.html /usr/share/nginx/html/50x.html
-
-COPY --from=build /app/dist/angular-frontend /usr/share/nginx/html
+COPY --from=build /app/dist/angular-frontend/browser /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
