@@ -1,12 +1,9 @@
-## start with a base image
-FROM maven:latest
-VOLUME /tmp
-ARG PROJECT_VERSION=0.0.1
-RUN mkdir -p /home/app
-WORKDIR /home/app
-ENV SPRING_PROFILES_ACTIVE application
-COPY ./ .
-ADD target/product-service-0.0.1-SNAPSHOT.jar product-service-0.0.1-SNAPSHOT.jar
-EXPOSE 8888
-ENTRYPOINT ["java", "-jar", "product-service-0.0.1-SNAPSHOT.jar"]
-CMD ["mvn", "spring-boot:run"]
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+COPY target/product-service-0.0.1-SNAPSHOT.jar app.jar
+
+EXPOSE 8081
+
+ENTRYPOINT ["java", "-jar", "app.jar"]

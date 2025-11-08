@@ -1,13 +1,12 @@
 package com.hoangtien2k3.productservice.service;
 
 import com.hoangtien2k3.productservice.dto.ProductDto;
-import reactor.core.publisher.Flux;
-
 import java.util.List;
 
 public interface ProductService {
-//    List<ProductDto> findAll();
-    Flux<List<ProductDto>> findAll();
+    List<ProductDto> findAll();
+
+    List<ProductDto> findByName(String name);
 
     ProductDto findById(final Integer productId);
 
