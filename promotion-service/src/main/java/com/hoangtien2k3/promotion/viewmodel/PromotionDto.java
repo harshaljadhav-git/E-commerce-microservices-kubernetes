@@ -18,7 +18,7 @@ import jakarta.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonDeserialize
-public class PromotionDto {
+public class PromotionDto<Long> {
     @NotNull
     private ApplyTo applyTo;
     @NotNull
