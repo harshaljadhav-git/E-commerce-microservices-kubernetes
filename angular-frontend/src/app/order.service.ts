@@ -7,12 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class OrderService {
 
-  private apiUrl = '/api/orders';
+  private baseUrl = 'http://localhost:8082/api/orders'; // Assuming order-service runs on port 8082
 
   constructor(private http: HttpClient) { }
 
-  getOrders(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+  createOrder(order: any): Observable<any> {
+    return this.http.post(this.baseUrl, order);
   }
-
 }

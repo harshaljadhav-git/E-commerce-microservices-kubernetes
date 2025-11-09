@@ -7,15 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  private apiUrl = '/api/products';
+  private baseUrl = 'http://localhost:8081/api/products'; // Assuming product-service runs on port 8081
 
   constructor(private http: HttpClient) { }
 
   getProducts(): Observable<any> {
-    return this.http.get(this.apiUrl);
+    return this.http.get(this.baseUrl);
   }
 
-  searchProducts(term: string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/search?name=${term}`);
+  getProduct(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
   }
 }

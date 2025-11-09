@@ -1,126 +1,89 @@
-.landing-page {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+.home-container {
+  text-align: center;
 }
 
 /* Hero Section */
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1600x600.png?text=Store+Banner') no-repeat center center/cover;
+.hero {
+  background: #007bff;
   color: white;
-  text-align: center;
-  padding: 100px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 80px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 .btn {
-  padding: 12px 25px;
+  display: inline-block;
+  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #007bff;
-  color: white;
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #f0f8ff;
 }
 
-/* Featured Products Section */
+/* Featured Products */
 .featured-products {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.featured-products h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  padding: 20px;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .product-card {
+  background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  background-color: white;
-}
-
-.product-card:hover {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .product-card img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 .product-card h3 {
-  font-size: 1.5rem;
-  margin: 20px 0 10px;
+  font-size: 1.2rem;
+  margin-top: 15px;
 }
 
 .price {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: #007bff;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 
 .btn-secondary {
   background-color: #6c757d;
   color: white;
+  border: none;
 }
 
 .btn-secondary:hover {
   background-color: #5a6268;
-}
-
-/* Promotion Section */
-.promotion-section {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.promotion-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.promotion-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-/* Footer */
-.footer {
-  background-color: #343a40;
-  color: white;
-  text-align: center;
-  padding: 20px;
 }
