@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  private baseUrl = 'http://localhost:8081/api/products'; // Assuming product-service runs on port 8081
+  private baseUrl = 'http://13.127.245.214:8080/api/products'; // Assuming product-service runs on port 8081
 
   constructor(private http: HttpClient) { }
 
