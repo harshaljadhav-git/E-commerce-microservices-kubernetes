@@ -51,7 +51,7 @@ export class ProductDetailComponent implements OnInit {
         }]
       };
       this.cartService.addToCart(cart).subscribe(() => {
-        console.log(`Added ${quantity} of ${this.product.productTitle} to cart.`);
+        console.log(`Added ${quantity} of ${this.product!.productTitle} to cart.`);
       });
     }
   }
