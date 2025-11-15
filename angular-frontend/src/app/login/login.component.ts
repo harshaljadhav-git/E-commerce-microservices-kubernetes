@@ -1,8 +1,9 @@
+'''
 import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Auth } from 'aws-amplify';
 
 @Component({
   selector: 'app-login',
@@ -13,24 +14,66 @@ import { CommonModule } from '@angular/common';
 })
 export class LoginComponent {
 
-  credentials = { username: '', password: '' };
-  errorMessage: string = '';
+  email = '';
+  password = '';
+  confirmationCode = '';
+  errorMessage = '';
+  isConfirming = false;
+  isSigningUp = false;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private router: Router) { }
 
-  login(): void {
-    this.authService.login(this.credentials).subscribe(
-      response => {
-        // Handle successful login
-        console.log('Login successful', response);
-        this.router.navigate(['/products']);
-      },
-      error => {
-        // Handle login error
-        console.error('Login failed', error);
-        this.errorMessage = 'Invalid username or password';
+  async signIn() {
+    try {
+      await Auth.signIn(this.email, this.password);
+      this.router.navigate(['/']);
+    } catch (error: any) {
+      this.errorMessage = error.message;
+      if (error.code === 'UserNotConfirmedException') {
+        this.isConfirming = true;
       }
-    );
+    }
   }
 
+  async signUp() {
+    try {
+      await Auth.signUp({
+        username: this.email,
+        password: this.password,
+        attributes: {
+          email: this.email
+        }
+      });
+      this.isConfirming = true;
+      this.isSigningUp = false;
+    } catch (error: any) {
+      this.errorMessage = error.message;
+    }
+  }
+
+  async confirmSignUp() {
+    try {
+      await Auth.confirmSignUp(this.email, this.confirmationCode);
+      await this.signIn();
+    } catch (error: any) {
+      this.errorMessage = error.message;
+    }
+  }
+
+  showSignUp() {
+    this.isSigningUp = true;
+    this.isConfirming = false;
+    this.errorMessage = '';
+    this.email = '';
+    this.password = '';
+  }
+
+  showSignIn() {
+    this.isSigningUp = false;
+    this.isConfirming = false;
+    this.errorMessage = '';
+    this.email = '';
+    this.password = '';
+  }
 }
+'''

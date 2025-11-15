@@ -1,89 +1,220 @@
-.home-container {
-  text-align: center;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
 }
 
-/* Hero Section */
-.hero {
-  background: #007bff;
-  color: white;
-  padding: 80px 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
+.shop-admin {
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search-icon {
+  margin-right: 5px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+}
+
+.user-options a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.spring-sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f8ff;
+  padding: 40px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.sale-content h1 {
+  font-size: 2rem;
   margin: 0;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+.sale-content p {
+  margin: 10px 0 20px;
 }
 
-.btn {
-  display: inline-block;
+.sale-buttons button {
   padding: 10px 20px;
+  border: none;
   border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.btn-primary {
-  background-color: #fff;
-  color: #007bff;
-  border: 2px solid #007bff;
+.shop-featured-btn {
+  background-color: #007bff;
+  color: white;
 }
 
-.btn-primary:hover {
-  background-color: #f0f8ff;
+.view-deals-btn {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  margin-left: 10px;
 }
 
-/* Featured Products */
-.featured-products {
-  padding: 20px;
+.sale-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.category-item span {
+  margin-right: 5px;
+}
+
+.trending-products,
+.new-arrivals {
+  margin-top: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
 .product-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
 .product-card img {
   max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .product-card h3 {
-  font-size: 1.2rem;
-  margin-top: 15px;
-}
-
-.price {
   font-size: 1rem;
-  font-weight: bold;
-  color: #007bff;
   margin: 10px 0;
 }
 
-.btn-secondary {
-  background-color: #6c757d;
-  color: white;
-  border: none;
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.btn-secondary:hover {
-  background-color: #5a6268;
+.special-offers {
+  margin-top: 40px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.offer-card {
+  display: flex;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.offer-card img {
+  max-width: 150px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.customer-reviews {
+  margin-top: 40px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.review-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-author img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.newsletter {
+  margin-top: 40px;
+  text-align: center;
+  background-color: #f0f8ff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.newsletter-form input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
