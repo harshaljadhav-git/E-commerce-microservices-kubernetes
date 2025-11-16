@@ -123,7 +123,7 @@ public class OrderServiceImpl implements OrderService {
         log.info("OrderDto, service; save order");
         return Mono.fromSupplier(() -> {
                     Order order = orderRepository.save(OrderMappingHelper.map(orderDto));
-                    eventProducer.send("order_placed", gson.toJson(OrderMappingHelper.map(order))).subscribe();
+                    eventProducer.send("order_placed", gson.toJson(OrderMappingHelper.map(order)));
                     return OrderMappingHelper.map(order);
                 })
                 .onErrorResume(throwable -> {
