@@ -1,4 +1,3 @@
-'''
 const awsmobile = {
     "aws_project_region": "ap-south-1",
     "aws_cognito_identity_pool_id": "",
@@ -26,4 +25,3 @@ const awsmobile = {
 
 
 export default awsmobile;
-'''
