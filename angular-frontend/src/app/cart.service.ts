@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CartService {
 
-  private baseUrl = 'http://13.127.245.214:8080/api/carts'; // Assuming order-service runs on port 8082
+  private baseUrl = '/api/carts';
 
   constructor(private http: HttpClient) { }
 

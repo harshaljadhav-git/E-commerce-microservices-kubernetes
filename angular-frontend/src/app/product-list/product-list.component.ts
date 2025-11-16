@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { ProductService } from '../product.service';
+import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
+import { CartService } from '../cart.service';
+import { map } from 'rxjs/operators';
 
 interface Product {
-  productId: number;
-  productTitle: string;
-  priceUnit: number;
-  imageUrl: string;
+  id: number;
+  name: string;
+  price: number;
+  image: string;
 }
 
 @Component({
@@ -15,21 +17,37 @@ interface Product {
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, RouterLink]
 })
 export class ProductListComponent implements OnInit {
-
   products: Product[] = [];
-
-  constructor(private router: Router, private productService: ProductService) { }
+  private http = inject(HttpClient);
+  private cartService = inject(CartService);
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((data: Product[]) => {
-      this.products = data;
+    this.http.get<any[]>('/api/products').pipe(
+      map(products => products.map(product => ({
+        id: product.productId,
+        name: product.productTitle,
+        price: product.priceUnit,
+        image: product.imageUrl
+      })))
+    ).subscribe(products => {
+      this.products = products;
     });
   }
 
-  viewProduct(productId: number): void {
-    this.router.navigate(['/product', productId]);
+  addToCart(product: Product): void {
+    const cart = {
+      cartId: 1, // Example cart ID
+      userId: 1, // Example user ID
+      orderDtos: [{
+        productId: product.id,
+        quantity: 1
+      }]
+    };
+    this.cartService.addToCart(cart).subscribe(() => {
+      console.log(`Added ${product.name} to cart.`);
+    });
   }
 }

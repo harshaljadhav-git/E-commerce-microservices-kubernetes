@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { CartService } from '../cart.service';
 
 interface CartItem {
   id: number;
@@ -15,22 +16,29 @@ interface CartItem {
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, RouterLink]
 })
 export class CartComponent implements OnInit {
 
   cartItems: CartItem[] = [];
   total: number = 0;
-
-  constructor(private router: Router) { }
+  private cartService = inject(CartService);
+  private router = inject(Router);
 
   ngOnInit(): void {
-    // Placeholder data
-    this.cartItems = [
-      { id: 1, name: 'Classic White T-Shirt', price: 29.99, quantity: 2, image: 'https://via.placeholder.com/150x150.png?text=T-Shirt' },
-      { id: 2, name: 'Slim Fit Jeans', price: 89.99, quantity: 1, image: 'https://via.placeholder.com/150x150.png?text=Jeans' },
-    ];
-    this.calculateTotal();
+    // In a real application, you would get the cart ID from the user's session.
+    // For now, we'll use a hardcoded cart ID.
+    const cartId = 1; 
+    this.cartService.getCart(cartId).subscribe((cart: any) => {
+      this.cartItems = cart.orderDtos.map((item: any) => ({
+        id: item.productId,
+        name: item.productName, // Assuming the backend provides productName
+        price: item.price, // Assuming the backend provides price
+        quantity: item.quantity,
+        image: item.imageUrl // Assuming the backend provides imageUrl
+      }));
+      this.calculateTotal();
+    });
   }
 
   calculateTotal(): void {
@@ -44,12 +52,14 @@ export class CartComponent implements OnInit {
     if (item) {
       item.quantity = quantity;
       this.calculateTotal();
+      // Here you would also call a service to update the cart on the backend
     }
   }
 
   removeItem(itemId: number): void {
     this.cartItems = this.cartItems.filter(i => i.id !== itemId);
     this.calculateTotal();
+    // Here you would also call a service to remove the item from the cart on the backend
   }
 
   checkout(): void {

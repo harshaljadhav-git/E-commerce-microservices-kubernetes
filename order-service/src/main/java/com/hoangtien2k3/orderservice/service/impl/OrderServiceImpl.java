@@ -1,7 +1,9 @@
 package com.hoangtien2k3.orderservice.service.impl;
 
+import com.google.gson.Gson;
 import com.hoangtien2k3.orderservice.dto.order.OrderDto;
 import com.hoangtien2k3.orderservice.entity.Order;
+import com.hoangtien2k3.orderservice.event.EventProducer;
 import com.hoangtien2k3.orderservice.exception.wrapper.CartNotFoundException;
 import com.hoangtien2k3.orderservice.exception.wrapper.OrderNotFoundException;
 import com.hoangtien2k3.orderservice.helper.OrderMappingHelper;
@@ -36,6 +38,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private final CallAPI callAPI;
+
+    @Autowired
+    private final EventProducer eventProducer;
+
+    private final Gson gson = new Gson();
 
     @Override
     public Mono<List<OrderDto>> findAll() {
@@ -114,7 +121,11 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Mono<OrderDto> save(final OrderDto orderDto) {
         log.info("OrderDto, service; save order");
-        return Mono.fromSupplier(() -> OrderMappingHelper.map(orderRepository.save(OrderMappingHelper.map(orderDto))))
+        return Mono.fromSupplier(() -> {
+                    Order order = orderRepository.save(OrderMappingHelper.map(orderDto));
+                    eventProducer.send("order_placed", gson.toJson(OrderMappingHelper.map(order))).subscribe();
+                    return OrderMappingHelper.map(order);
+                })
                 .onErrorResume(throwable -> {
                     log.error("Error saving order: {}", throwable.getMessage());
                     return Mono.error(throwable);

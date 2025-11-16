@@ -3,6 +3,7 @@ package com.hoangtien2k3.notificationservice.event;
 import com.google.gson.Gson;
 import com.hoangtien2k3.notificationservice.constant.KafkaConstant;
 import com.hoangtien2k3.notificationservice.dto.EmailDetails;
+import com.hoangtien2k3.notificationservice.dto.OrderDto;
 import com.hoangtien2k3.notificationservice.dto.PaymentDto;
 import com.hoangtien2k3.notificationservice.entity.PaymentStatus;
 import com.hoangtien2k3.notificationservice.service.EmailService;
@@ -19,6 +20,7 @@ import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.function.Consumer;
 
@@ -40,6 +42,7 @@ public class EventConsumer {
     public EventConsumer(ReceiverOptions<String, String> receiverOptions) {
         subscribeToTopic(receiverOptions, KafkaConstant.PROFILE_ONBOARDING_TOPIC, this::sendEmailKafkaOnboarding);
         subscribeToTopic(receiverOptions, KafkaConstant.STATUS_PAYMENT_SUCCESSFUL, this::paymentOrderKafkaOnboarding);
+        subscribeToTopic(receiverOptions, "order_placed", this::orderPlacedKafkaOnboarding);
     }
 
     private void subscribeToTopic(ReceiverOptions<String, String> receiverOptions, String topic, Consumer<ReceiverRecord<String, String>> handler) {
@@ -77,6 +80,20 @@ public class EventConsumer {
             eventProducer.send(KafkaConstant.PROFILE_ONBOARDED_TOPIC, gson.toJson(email)).subscribe();
         });
 
+    }
+
+    public void orderPlacedKafkaOnboarding(ReceiverRecord<String, String> receiverRecord) {
+        log.info("Order placed event received in notification-service.");
+        OrderDto orderDto = gson.fromJson(receiverRecord.value(), OrderDto.class);
+
+        EmailDetails emailDetails = EmailDetails.builder()
+                .recipient("hoangtien2k3dev@gmail.com")
+                .msgBody("Your order has been placed successfully. Order details: " + orderDto.toString())
+                .subject("Order Confirmation")
+                .build();
+        emailService.sendSimpleMail(emailDetails).subscribe(email -> {
+            log.info("Order confirmation email sent successfully.");
+        });
     }
 
     public String msgBody(Boolean isPayed, PaymentStatus paymentStatus) {

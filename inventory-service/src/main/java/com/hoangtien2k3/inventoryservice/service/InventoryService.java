@@ -3,6 +3,7 @@ package com.hoangtien2k3.inventoryservice.service;
 import com.hoangtien2k3.inventoryservice.dto.request.TokenValidationRequest;
 import com.hoangtien2k3.inventoryservice.dto.response.InventoryResponse;
 import com.hoangtien2k3.inventoryservice.dto.response.TokenValidationResponse;
+import com.hoangtien2k3.inventoryservice.model.Inventory;
 import com.hoangtien2k3.inventoryservice.repository.InventoryRepository;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +17,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Slf4j
@@ -79,6 +81,22 @@ public class InventoryService {
                                 .isInStock(inventory.getQuantity() > 0)
                                 .build()
                 ).toList();
+    }
+
+    @Transactional
+    public Inventory save(Inventory inventory) {
+        return inventoryRepository.save(inventory);
+    }
+
+    @Transactional
+    public Inventory update(String productName, Integer quantity) {
+        Optional<Inventory> optionalInventory = inventoryRepository.findByProductName(productName);
+        if (optionalInventory.isPresent()) {
+            Inventory inventory = optionalInventory.get();
+            inventory.setQuantity(inventory.getQuantity() - quantity);
+            return inventoryRepository.save(inventory);
+        }
+        return null;
     }
 
 }
