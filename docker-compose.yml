@@ -91,7 +91,8 @@ services:
 
   discovery-service:
     build:
-      context: ./discovery-service
+      context: .
+      dockerfile: ./discovery-service/Dockerfile
     container_name: discovery-service
     ports:
       - "8761:8761"
@@ -100,7 +101,8 @@ services:
 
   api-gateway:
     build:
-      context: ./api-gateway
+      context: .
+      dockerfile: ./api-gateway/Dockerfile
     container_name: api-gateway
     ports:
       - "8080:8080"
@@ -113,7 +115,8 @@ services:
 
   user-service:
     build:
-      context: ./user-service
+      context: .
+      dockerfile: ./user-service/Dockerfile
     container_name: user-service
     ports:
       - "8088:8088"
@@ -132,7 +135,8 @@ services:
 
   inventory-service:
     build:
-      context: ./inventory-service
+      context: .
+      dockerfile: ./inventory-service/Dockerfile
     container_name: inventory-service
     ports:
       - "8082:8082"
@@ -149,7 +153,8 @@ services:
 
   notification-service:
     build:
-      context: ./notification-service
+      context: .
+      dockerfile: ./notification-service/Dockerfile
     container_name: notification-service
     ports:
       - "8083:8083"
@@ -169,7 +174,8 @@ services:
 
   order-service:
     build:
-      context: ./order-service
+      context: .
+      dockerfile: ./order-service/Dockerfile
     container_name: order-service
     ports:
       - "8084:8084"
@@ -186,7 +192,8 @@ services:
 
   payment-service:
     build:
-      context: ./payment-service
+      context: .
+      dockerfile: ./payment-service/Dockerfile
     container_name: payment-service
     ports:
       - "8085:8085"
@@ -205,7 +212,8 @@ services:
       
   product-service:
     build:
-      context: ./product-service
+      context: .
+      dockerfile: ./product-service/Dockerfile
     container_name: product-service
     ports:
       - "8086:8086"
@@ -223,7 +231,8 @@ services:
 
   shipping-service:
     build:
-      context: ./shipping-service
+      context: .
+      dockerfile: ./shipping-service/Dockerfile
     container_name: shipping-service
     ports:
       - "8087:8087"
