@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   private router = inject(Router);
 
   constructor() {
-    Hub.listen('auth', ({ payload: { event } }) => {
+    Hub.listen('auth', ({ payload: { event } }: { payload: { event: string } }) => {
       if (event === 'signIn' || event === 'autoSignIn') {
         this.isAuthenticated = true;
         this.router.navigate(['/']);
