@@ -157,7 +157,7 @@ class PromotionServiceTest {
                 "Promotion", "code",
                 Instant.now().minus(120, ChronoUnit.DAYS), Instant.now().plus(120, ChronoUnit.DAYS));
         assertEquals(2, result.promotionDetailVmList().size());
-        PromotionDetailVm promotionDetailVm = result.promotionDetailVmList().getFirst();
+        PromotionDetailVm promotionDetailVm = result.promotionDetailVmList().get(0);
         assertEquals("promotion-1", promotionDetailVm.slug());
     }
 
