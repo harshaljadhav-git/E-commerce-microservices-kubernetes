@@ -20,12 +20,12 @@ import jakarta.validation.constraints.Size;
 
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder
-@PromotionConstraint
+@PromotionConstraint(message = "", groups = {})
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonDeserialize
-public class PromotionPostVm extends PromotionDto {
+public class PromotionPostVm extends PromotionDto<Long> {
     @Size(min = 1, max = 450)
     private String name;
     @NotBlank

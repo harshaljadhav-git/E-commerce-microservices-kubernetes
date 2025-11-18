@@ -7,10 +7,10 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.apache.commons.collections.CollectionUtils;
 
-public class PromotionValidator implements ConstraintValidator<PromotionConstraint, PromotionDto> {
+public class PromotionValidator implements ConstraintValidator<PromotionConstraint, PromotionDto<?>> {
 
     @Override
-    public boolean isValid(PromotionDto promotionDto, ConstraintValidatorContext context) {
+    public boolean isValid(PromotionDto<?> promotionDto, ConstraintValidatorContext context) {
         if (promotionDto == null) return false;
 
         if (UsageType.LIMITED.equals(promotionDto.getUsageType()) && promotionDto.getUsageLimit() <= 0) {
@@ -37,15 +37,15 @@ public class PromotionValidator implements ConstraintValidator<PromotionConstrai
         return true;
     }
 
-    private boolean isValidDiscountType(PromotionDto promotion) {
+    private boolean isValidDiscountType(PromotionDto<?> promotion) {
         if (DiscountType.FIXED.equals(promotion.getDiscountType())) {
-            return promotion.getDiscountAmount() > 0;
+            return (Long) promotion.getDiscountAmount() > 0;
         } else {
-            return promotion.getDiscountPercentage() > 0;
+            return (Long) promotion.getDiscountPercentage() > 0;
         }
     }
 
-    private boolean isValidApplyToItems(PromotionDto promotion) {
+    private boolean isValidApplyToItems(PromotionDto<?> promotion) {
         return switch (promotion.getApplyTo()) {
             case PRODUCT -> CollectionUtils.isNotEmpty(promotion.getProductIds());
             case BRAND -> CollectionUtils.isNotEmpty(promotion.getBrandIds());

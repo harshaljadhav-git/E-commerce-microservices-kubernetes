@@ -19,11 +19,11 @@ import jakarta.validation.constraints.Size;
 
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder
-@PromotionConstraint
+@PromotionConstraint(message = "", groups = {})
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PromotionPutVm extends PromotionDto {
+public class PromotionPutVm extends PromotionDto<Long> {
     @NotNull
     private Long id;
     @Size(min = 1, max = 450)
