@@ -1,5 +1,5 @@
 ## start with a base image
-FROM maven:latest
+FROM maven:3.8.5-openjdk-17
 VOLUME /tmp
 ARG PROJECT_VERSION=0.0.1
 RUN mkdir -p /home/app
