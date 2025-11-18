@@ -96,7 +96,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -117,7 +117,7 @@
 
         <!-- WebClient (Reactive HTTP Client) -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
+            <groupId>org.springframework.boot</groupd>
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
@@ -157,6 +157,11 @@
             <artifactId>springfox-swagger2</artifactId>
             <version>3.0.0</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-community-dialects</artifactId>
         </dependency>
 
     </dependencies>

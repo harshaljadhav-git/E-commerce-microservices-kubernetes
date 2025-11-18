@@ -99,6 +99,10 @@
 			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
 			<version>3.1.10</version>
 		</dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-community-dialects</artifactId>
+        </dependency>
 
 	</dependencies>
 
