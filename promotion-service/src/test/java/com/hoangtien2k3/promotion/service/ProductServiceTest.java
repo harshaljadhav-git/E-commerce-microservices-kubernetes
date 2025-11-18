@@ -129,7 +129,7 @@ class ProductServiceTest {
             .fromHttpUrl(serviceUrlConfig.product())
             .path("/backoffice/brands/by-ids")
             .queryParams(createIdParams(ids))
-_build()
+            .build()
             .toUri();
 
         RestClient.RequestHeadersUriSpec requestHeadersUriSpec = Mockito.mock(RestClient.RequestHeadersUriSpec.class);
