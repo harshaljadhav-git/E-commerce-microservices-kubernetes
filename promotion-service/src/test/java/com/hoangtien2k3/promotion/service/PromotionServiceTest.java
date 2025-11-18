@@ -2,7 +2,6 @@ package com.hoangtien2k3.promotion.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import com.hoangtien2k3.promotion.PromotionApplication;
 import com.hoangtien2k3.promotion.exception.BadRequestException;
 import com.hoangtien2k3.promotion.exception.DuplicatedException;
