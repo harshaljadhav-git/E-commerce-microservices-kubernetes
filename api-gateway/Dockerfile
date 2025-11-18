@@ -1,12 +1,9 @@
-## start with a base image
-FROM maven:3.8.5-openjdk-17
-VOLUME /tmp
-ARG PROJECT_VERSION=0.0.1
-RUN mkdir -p /home/app
-WORKDIR /home/app
-ENV SPRING_PROFILES_ACTIVE application
-COPY ./ .
-ADD target/api-gateway-0.0.1-SNAPSHOT.jar api-gateway-0.0.1-SNAPSHOT.jar
+FROM eclipse-temurin:17-jre-jammy
+
+WORKDIR /app
+
+COPY target/api-gateway-0.0.1-SNAPSHOT.jar app.jar
+
 EXPOSE 8888
-ENTRYPOINT ["java", "-jar", "api-gateway-0.0.1-SNAPSHOT.jar"]
-CMD ["mvn", "spring-boot:run"]
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
