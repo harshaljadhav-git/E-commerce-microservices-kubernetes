@@ -5,12 +5,12 @@
     <parent>
         <groupId>com.hoangtien2k3</groupId>
         <artifactId>ecommerce-microservices</artifactId>
-        <version>${revision}</version>
+        <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.hoangtien2k3</groupId>
     <artifactId>search-service</artifactId>
-    <version>${revision}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <name>search</name>
     <description>Spring Boot Search Ecommerce</description>
     <properties>
