@@ -39,8 +39,7 @@ public class ProductController {
     public ResponseEntity<ProductDto> findById(@PathVariable("productId")
                                                @NotBlank(message = "Input must not be blank!")
                                                @Valid final String productId) {
-        log.info("ProductDto, resource; fetch product by id
-");
+        log.info("ProductDto, resource; fetch product by id");
         return ResponseEntity.ok(productService.findById(Integer.parseInt(productId)));
     }
 
@@ -48,8 +47,7 @@ public class ProductController {
     public ResponseEntity<ProductDto> save(@RequestBody
                                            @NotNull(message = "Input must not be NULL!")
                                            @Valid final ProductDto productDto) {
-        log.info("ProductDto, resource; save product
-");
+        log.info("ProductDto, resource; save product");
         return ResponseEntity.ok(productService.save(productDto));
     }
 
@@ -57,8 +55,7 @@ public class ProductController {
     public ResponseEntity<ProductDto> update(@RequestBody
                                              @NotNull(message = "Input must not be NULL!")
                                              @Valid final ProductDto productDto) {
-        log.info("ProductDto, resource; update product
-");
+        log.info("ProductDto, resource; update product");
         return ResponseEntity.ok(productService.update(productDto));
     }
 
@@ -69,15 +66,13 @@ public class ProductController {
                                              @RequestBody
                                              @NotNull(message = "Input must not be NULL!")
                                              @Valid final ProductDto productDto) {
-        log.info("ProductDto, resource; update product with productId
-");
+        log.info("ProductDto, resource; update product with productId");
         return ResponseEntity.ok(productService.update(Integer.parseInt(productId), productDto));
     }
 
     @DeleteMapping("/{productId}")
     public ResponseEntity<Boolean> deleteById(@PathVariable("productId") final String productId) {
-        log.info("Boolean, resource; delete product by id
-");
+        log.info("Boolean, resource; delete product by id");
         productService.deleteById(Integer.parseInt(productId));
         return ResponseEntity.ok(true);
     }
