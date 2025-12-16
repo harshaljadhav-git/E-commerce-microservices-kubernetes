@@ -1,0 +1,447 @@
+﻿[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.hoangtien2k3:payment-service >------------------
+[INFO] Building payment-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ payment-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\payment-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ payment-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ payment-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 33 source files with javac [debug release 17] to target\classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java: Some input files use or override a deprecated API.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/PaymentServiceApplication.java:[7,1] org.springframework.boot.autoconfigure.SpringBootApplication is not a repeatable annotation type
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[10,26] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[11,35] cannot find symbol
+  symbol:   method getPaymentId()
+  location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[12,33] cannot find symbol
+  symbol:   method getIsPayed()
+  location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[13,39] cannot find symbol
+  symbol:   method getPaymentStatus()
+  location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[14,33] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[15,32] cannot find symbol
+  symbol:   method getUserId()
+  location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[17,33] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.paymentservice.dto.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[18,49] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[20,33] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.paymentservice.dto.UserDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[21,36] cannot find symbol
+  symbol:   method getUserId()
+  location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[27,23] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[28,38] cannot find symbol
+  symbol:   method getPaymentId()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[29,36] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[30,35] cannot find symbol
+  symbol:   method getUserId()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[31,36] cannot find symbol
+  symbol:   method getIsPayed()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[32,42] cannot find symbol
+  symbol:   method getPaymentStatus()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/entity/PaymentStatus.java:[10,16] constructor PaymentStatus in enum com.hoangtien2k3.paymentservice.entity.PaymentStatus cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/entity/PaymentStatus.java:[11,16] constructor PaymentStatus in enum com.hoangtien2k3.paymentservice.entity.PaymentStatus cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/entity/PaymentStatus.java:[12,14] constructor PaymentStatus in enum com.hoangtien2k3.paymentservice.entity.PaymentStatus cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[51,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[58,70] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[64,45] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[56,25] incompatible types: inference variable R has incompatible bounds
+    equality constraints: java.util.List<com.hoangtien2k3.paymentservice.dto.PaymentDto>
+    lower bounds: java.util.List<java.lang.Object>
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[73,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[82,70] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[88,45] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[80,25] incompatible types: inference variable T has incompatible equality constraints com.hoangtien2k3.paymentservice.dto.PaymentDto,java.lang.Object
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[99,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[105,62] cannot find symbol
+  symbol:   method getOrderDto()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[109,78] cannot find symbol
+  symbol:   method getUserId()
+  location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[118,37] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[131,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[134,80] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable dto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[138,68] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.paymentservice.dto.KafkaPaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[139,55] cannot find symbol
+  symbol:   method getPaymentId()
+  location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[140,53] cannot find symbol
+  symbol:   method getIsPayed()
+  location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[141,59] cannot find symbol
+  symbol:   method getPaymentStatus()
+  location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[142,53] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[143,52] cannot find symbol
+  symbol:   method getUserId()
+  location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[151,21] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[160,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[167,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[178,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[60,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[62,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[64,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[66,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[68,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/exception/ApiExceptionHandler.java:[28,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/exception/ApiExceptionHandler.java:[32,33] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.paymentservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/exception/ApiExceptionHandler.java:[46,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/exception/ApiExceptionHandler.java:[50,33] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.paymentservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[50,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[82,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[103,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[119,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[139,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[153,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[INFO] 59 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.277 s
+[INFO] Finished at: 2025-12-13T23:17:01+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project payment-service: Compilation failure: Compilation failure: 
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/PaymentServiceApplication.java:[7,1] org.springframework.boot.autoconfigure.SpringBootApplication is not a repeatable annotation type
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[10,26] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[11,35] cannot find symbol
+[ERROR]   symbol:   method getPaymentId()
+[ERROR]   location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[12,33] cannot find symbol
+[ERROR]   symbol:   method getIsPayed()
+[ERROR]   location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[13,39] cannot find symbol
+[ERROR]   symbol:   method getPaymentStatus()
+[ERROR]   location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[14,33] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[15,32] cannot find symbol
+[ERROR]   symbol:   method getUserId()
+[ERROR]   location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[17,33] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.paymentservice.dto.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[18,49] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[20,33] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.paymentservice.dto.UserDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[21,36] cannot find symbol
+[ERROR]   symbol:   method getUserId()
+[ERROR]   location: variable payment of type com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[27,23] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.paymentservice.entity.Payment
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[28,38] cannot find symbol
+[ERROR]   symbol:   method getPaymentId()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[29,36] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[30,35] cannot find symbol
+[ERROR]   symbol:   method getUserId()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[31,36] cannot find symbol
+[ERROR]   symbol:   method getIsPayed()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/helper/PaymentMappingHelper.java:[32,42] cannot find symbol
+[ERROR]   symbol:   method getPaymentStatus()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/entity/PaymentStatus.java:[10,16] constructor PaymentStatus in enum com.hoangtien2k3.paymentservice.entity.PaymentStatus cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/entity/PaymentStatus.java:[11,16] constructor PaymentStatus in enum com.hoangtien2k3.paymentservice.entity.PaymentStatus cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/entity/PaymentStatus.java:[12,14] constructor PaymentStatus in enum com.hoangtien2k3.paymentservice.entity.PaymentStatus cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[51,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[58,70] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[64,45] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[56,25] incompatible types: inference variable R has incompatible bounds
+[ERROR]     equality constraints: java.util.List<com.hoangtien2k3.paymentservice.dto.PaymentDto>
+[ERROR]     lower bounds: java.util.List<java.lang.Object>
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[73,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[82,70] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[88,45] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[80,25] incompatible types: inference variable T has incompatible equality constraints com.hoangtien2k3.paymentservice.dto.PaymentDto,java.lang.Object
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[99,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[105,62] cannot find symbol
+[ERROR]   symbol:   method getOrderDto()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[109,78] cannot find symbol
+[ERROR]   symbol:   method getUserId()
+[ERROR]   location: variable paymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[118,37] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[131,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[134,80] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable dto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[138,68] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.paymentservice.dto.KafkaPaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[139,55] cannot find symbol
+[ERROR]   symbol:   method getPaymentId()
+[ERROR]   location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[140,53] cannot find symbol
+[ERROR]   symbol:   method getIsPayed()
+[ERROR]   location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[141,59] cannot find symbol
+[ERROR]   symbol:   method getPaymentStatus()
+[ERROR]   location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[142,53] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[143,52] cannot find symbol
+[ERROR]   symbol:   method getUserId()
+[ERROR]   location: variable savedPaymentDto of type com.hoangtien2k3.paymentservice.dto.PaymentDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[151,21] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[160,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[167,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/service/impl/PaymentServiceImpl.java:[178,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.service.impl.PaymentServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[60,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[62,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[64,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[66,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java:[68,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/exception/ApiExceptionHandler.java:[28,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/exception/ApiExceptionHandler.java:[32,33] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.paymentservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/exception/ApiExceptionHandler.java:[46,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/exception/ApiExceptionHandler.java:[50,33] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.paymentservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[50,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[82,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[103,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[119,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[139,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/api/PaymentController.java:[153,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.paymentservice.api.PaymentController
+[ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project payment-service: Compilation failure
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:903)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:280)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:203)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.compiler.CompilationFailureException: Compilation failure
+    at org.apache.maven.plugin.compiler.AbstractCompilerMojo.execute (AbstractCompilerMojo.java:1212)
+    at org.apache.maven.plugin.compiler.CompilerMojo.execute (CompilerMojo.java:193)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:903)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:280)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:203)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+[ERROR] 
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

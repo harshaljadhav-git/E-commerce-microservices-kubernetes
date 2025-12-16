@@ -1,0 +1,17 @@
+<h2>Orders</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Total Price</th>
+      <th>Order Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.orderId }}</td>
+      <td>{{ order.totalPrice | currency }}</td>
+      <td>{{ order.orderStatus }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-service-config
+data:
+  SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/userservice?useSSL=false
+  DB_USER: root
+  DB_PASS: "12042003"
+  KAFKA_HOST: broker
+  EUREKA_URI: http://discovery-service:8761/eureka
+  API_GATEWAY_URL: http://api-gateway:8080

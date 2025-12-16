@@ -1,0 +1,83 @@
+
+<div class="login-container">
+  <div class="login-box">
+
+    <!-- Sign-In View -->
+    <div *ngIf="!isSigningUp && !isConfirming">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span>Commerce Admin</span>
+      </div>
+      <h2>Sign in to your account</h2>
+      <p>Use your admin credentials to continue</p>
+      <form (ngSubmit)="signIn()">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="name@company.com" [(ngModel)]="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" [(ngModel)]="password" name="password" required />
+        </div>
+        <div class="options">
+          <div class="remember-me">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Remember me</label>
+          </div>
+          <a href="#" class="forgot-password">Forgot password</a>
+        </div>
+        <button type="submit" class="sign-in-btn">Sign In</button>
+      </form>
+      <div class="or-divider">
+        <span>Or sign in with</span>
+      </div>
+      <div class="social-login">
+        <button class="sso-btn">SSO</button>
+        <button class="magic-link-btn">Magic Link</button>
+      </div>
+       <p class="terms">Don't have an account? <a (click)="showSignUp()">Sign up</a></p>
+    </div>
+
+    <!-- Sign-Up View -->
+    <div *ngIf="isSigningUp && !isConfirming">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span>Commerce Admin</span>
+      </div>
+      <h2>Create your account</h2>
+      <p>A confirmation code will be sent to your email.</p>
+      <form (ngSubmit)="signUp()">
+        <div class="form-group">
+          <label for="signUpEmail">Email</label>
+          <input type="email" id="signUpEmail" placeholder="name@company.com" [(ngModel)]="email" name="signUpEmail" required />
+        </div>
+        <div class="form-group">
+          <label for="signUpPassword">Password</label>
+          <input type="password" id="signUpPassword" placeholder="••••••••" [(ngModel)]="password" name="signUpPassword" required />
+        </div>
+        <button type="submit" class="sign-in-btn">Sign Up</button>
+      </form>
+      <p class="terms">Already have an account? <a (click)="showSignIn()">Sign in</a></p>
+    </div>
+
+    <!-- Confirmation View -->
+    <div *ngIf="isConfirming">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span>Commerce Admin</span>
+      </div>
+      <h2>Confirm your account</h2>
+      <p>Enter the confirmation code sent to your email.</p>
+      <form (ngSubmit)="confirmSignUp()">
+        <div class="form-group">
+          <label for="confirmationCode">Confirmation Code</label>
+          <input type="text" id="confirmationCode" placeholder="••••••" [(ngModel)]="confirmationCode" name="confirmationCode" required />
+        </div>
+        <button type="submit" class="sign-in-btn">Confirm Account</button>
+      </form>
+    </div>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <p class="terms" *ngIf="!isConfirming && !isSigningUp">By signing in you agree to our Terms and Privacy Policy</p>
+  </div>
+</div>
