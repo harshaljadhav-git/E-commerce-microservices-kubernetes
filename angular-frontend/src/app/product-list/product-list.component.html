@@ -1,0 +1,10 @@
+<div class="product-grid">
+  <div *ngFor="let product of products" class="product-card">
+    <a [routerLink]="['/product', product.id]">
+      <img [src]="product.image" alt="{{ product.name }}">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price | currency }}</p>
+    </a>
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </div>
+</div>

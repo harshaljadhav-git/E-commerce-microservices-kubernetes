@@ -1,0 +1,6 @@
+Bugs found in testing:
+- The login functionality is not working correctly. When a user tries to log in with valid credentials, they are not redirected to the products page.
+- The product listing page is not displaying all the products available in the database.
+- The product search functionality is not working correctly. When a user searches for a product, the results are not accurate.
+- The add to cart functionality is not working correctly. When a user adds a product to the cart, the cart is not updated.
+- The checkout functionality is not working correctly. When a user tries to checkout, the order is not placed.

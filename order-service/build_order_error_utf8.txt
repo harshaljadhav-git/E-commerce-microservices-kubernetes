@@ -1,0 +1,599 @@
+﻿[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.hoangtien2k3:order-service >-------------------
+[INFO] Building order-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ order-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\order-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ order-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ order-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 39 source files with javac [debug release 17] to target\classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtTokenFilter.java: Some input files use or override a deprecated API.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtTokenFilter.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/OrderServiceApplication.java:[7,1] org.springframework.boot.autoconfigure.SpringBootApplication is not a repeatable annotation type
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[41,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[73,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[87,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[103,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[122,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[136,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[49,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[56,68] cannot find symbol
+  symbol:   method getProductId()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[62,45] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[54,25] incompatible types: inference variable R has incompatible bounds
+    equality constraints: java.util.List<com.hoangtien2k3.orderservice.dto.order.OrderDto>
+    lower bounds: java.util.List<java.lang.Object>
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[71,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[80,71] cannot find symbol
+  symbol:   method getProductId()
+  location: variable productDtos of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[86,45] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[78,25] incompatible types: inference variable T has incompatible equality constraints com.hoangtien2k3.orderservice.dto.order.OrderDto,java.lang.Object
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[97,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[103,60] cannot find symbol
+  symbol:   method getProductId()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[109,37] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[123,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[130,21] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[137,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[144,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[155,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/event/EventProducer.java:[18,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.event.EventProducer
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[60,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[62,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[64,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[66,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[68,13] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[46,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[78,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[93,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[109,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[128,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[142,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[12,24] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[13,31] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[14,33] cannot find symbol
+  symbol:   method getOrderDate()
+  location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[15,33] cannot find symbol
+  symbol:   method getOrderDesc()
+  location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[16,32] cannot find symbol
+  symbol:   method getOrderFee()
+  location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[17,33] cannot find symbol
+  symbol:   method getProductId()
+  location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[18,33] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[19,38] cannot find symbol
+  symbol:   method getCart()
+  location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[20,38] cannot find symbol
+  symbol:   method getCart()
+  location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[27,21] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[28,34] cannot find symbol
+  symbol:   method getOrderId()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[29,36] cannot find symbol
+  symbol:   method getOrderDate()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[30,36] cannot find symbol
+  symbol:   method getOrderDesc()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[31,35] cannot find symbol
+  symbol:   method getOrderFee()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[32,36] cannot find symbol
+  symbol:   method getProductId()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[33,27] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[34,41] cannot find symbol
+  symbol:   method getCartDto()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[35,41] cannot find symbol
+  symbol:   method getCartDto()
+  location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[48,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[57,64] cannot find symbol
+  symbol:   method getUserDto()
+  location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[63,45] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[55,25] incompatible types: inference variable R has incompatible bounds
+    equality constraints: java.util.List<com.hoangtien2k3.orderservice.dto.order.CartDto>
+    lower bounds: java.util.List<java.lang.Object>
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[72,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[82,64] cannot find symbol
+  symbol:   method getUserDto()
+  location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[88,45] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[80,25] incompatible types: inference variable T has incompatible equality constraints com.hoangtien2k3.orderservice.dto.order.CartDto,java.lang.Object
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[99,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[106,56] cannot find symbol
+  symbol:   method getUserDto()
+  location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[112,37] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[120,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[127,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[134,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[145,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[33,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[37,33] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[51,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[55,33] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[67,9] cannot find symbol
+  symbol:   variable log
+  location: class com.hoangtien2k3.orderservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[69,53] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[14,23] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[15,29] cannot find symbol
+  symbol:   method getCartId()
+  location: variable cart of type com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[16,29] cannot find symbol
+  symbol:   method getUserId()
+  location: variable cart of type com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[17,32] cannot find symbol
+  symbol:   method getOrders()
+  location: variable cart of type com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[19,47] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[27,32] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.dto.user.UserDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[28,41] cannot find symbol
+  symbol:   method getUserId()
+  location: variable cart of type com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[35,20] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[36,32] cannot find symbol
+  symbol:   method getCartId()
+  location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[37,32] cannot find symbol
+  symbol:   method getUserId()
+  location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[38,32] cannot find symbol
+  symbol:   method getOrderDtos()
+  location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[40,47] cannot find symbol
+  symbol:   method builder()
+  location: class com.hoangtien2k3.orderservice.entity.Order
+[INFO] 86 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.499 s
+[INFO] Finished at: 2025-12-13T23:08:43+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project order-service: Compilation failure: Compilation failure: 
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/OrderServiceApplication.java:[7,1] org.springframework.boot.autoconfigure.SpringBootApplication is not a repeatable annotation type
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[41,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[73,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[87,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[103,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[122,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/OrderController.java:[136,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.OrderController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[49,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[56,68] cannot find symbol
+[ERROR]   symbol:   method getProductId()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[62,45] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[54,25] incompatible types: inference variable R has incompatible bounds
+[ERROR]     equality constraints: java.util.List<com.hoangtien2k3.orderservice.dto.order.OrderDto>
+[ERROR]     lower bounds: java.util.List<java.lang.Object>
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[71,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[80,71] cannot find symbol
+[ERROR]   symbol:   method getProductId()
+[ERROR]   location: variable productDtos of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[86,45] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[78,25] incompatible types: inference variable T has incompatible equality constraints com.hoangtien2k3.orderservice.dto.order.OrderDto,java.lang.Object
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[97,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[103,60] cannot find symbol
+[ERROR]   symbol:   method getProductId()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[109,37] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[123,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[130,21] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[137,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[144,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/OrderServiceImpl.java:[155,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.OrderServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/event/EventProducer.java:[18,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.event.EventProducer
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[60,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[62,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[64,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[66,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtProvider.java:[68,13] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.security.JwtProvider
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[46,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[78,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[93,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[109,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[128,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/api/CartController.java:[142,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.api.CartController
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[12,24] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[13,31] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[14,33] cannot find symbol
+[ERROR]   symbol:   method getOrderDate()
+[ERROR]   location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[15,33] cannot find symbol
+[ERROR]   symbol:   method getOrderDesc()
+[ERROR]   location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[16,32] cannot find symbol
+[ERROR]   symbol:   method getOrderFee()
+[ERROR]   location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[17,33] cannot find symbol
+[ERROR]   symbol:   method getProductId()
+[ERROR]   location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[18,33] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[19,38] cannot find symbol
+[ERROR]   symbol:   method getCart()
+[ERROR]   location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[20,38] cannot find symbol
+[ERROR]   symbol:   method getCart()
+[ERROR]   location: variable order of type com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[27,21] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.entity.Order
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[28,34] cannot find symbol
+[ERROR]   symbol:   method getOrderId()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[29,36] cannot find symbol
+[ERROR]   symbol:   method getOrderDate()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[30,36] cannot find symbol
+[ERROR]   symbol:   method getOrderDesc()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[31,35] cannot find symbol
+[ERROR]   symbol:   method getOrderFee()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[32,36] cannot find symbol
+[ERROR]   symbol:   method getProductId()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[33,27] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[34,41] cannot find symbol
+[ERROR]   symbol:   method getCartDto()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/OrderMappingHelper.java:[35,41] cannot find symbol
+[ERROR]   symbol:   method getCartDto()
+[ERROR]   location: variable orderDto of type com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[48,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[57,64] cannot find symbol
+[ERROR]   symbol:   method getUserDto()
+[ERROR]   location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[63,45] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[55,25] incompatible types: inference variable R has incompatible bounds
+[ERROR]     equality constraints: java.util.List<com.hoangtien2k3.orderservice.dto.order.CartDto>
+[ERROR]     lower bounds: java.util.List<java.lang.Object>
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[72,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[82,64] cannot find symbol
+[ERROR]   symbol:   method getUserDto()
+[ERROR]   location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[88,45] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[80,25] incompatible types: inference variable T has incompatible equality constraints com.hoangtien2k3.orderservice.dto.order.CartDto,java.lang.Object
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[99,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[106,56] cannot find symbol
+[ERROR]   symbol:   method getUserDto()
+[ERROR]   location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[112,37] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[120,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[127,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[134,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/service/impl/CartServiceImpl.java:[145,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.service.impl.CartServiceImpl
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[33,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[37,33] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[51,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[55,33] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[67,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.hoangtien2k3.orderservice.exception.ApiExceptionHandler
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/exception/ApiExceptionHandler.java:[69,53] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.exception.payload.ExceptionMessage
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[14,23] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[15,29] cannot find symbol
+[ERROR]   symbol:   method getCartId()
+[ERROR]   location: variable cart of type com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[16,29] cannot find symbol
+[ERROR]   symbol:   method getUserId()
+[ERROR]   location: variable cart of type com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[17,32] cannot find symbol
+[ERROR]   symbol:   method getOrders()
+[ERROR]   location: variable cart of type com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[19,47] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.dto.order.OrderDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[27,32] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.dto.user.UserDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[28,41] cannot find symbol
+[ERROR]   symbol:   method getUserId()
+[ERROR]   location: variable cart of type com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[35,20] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.entity.Cart
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[36,32] cannot find symbol
+[ERROR]   symbol:   method getCartId()
+[ERROR]   location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[37,32] cannot find symbol
+[ERROR]   symbol:   method getUserId()
+[ERROR]   location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[38,32] cannot find symbol
+[ERROR]   symbol:   method getOrderDtos()
+[ERROR]   location: variable cartDto of type com.hoangtien2k3.orderservice.dto.order.CartDto
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/helper/CartMappingHelper.java:[40,47] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.hoangtien2k3.orderservice.entity.Order
+[ERROR] -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project order-service: Compilation failure
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:903)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:280)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:203)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.compiler.CompilationFailureException: Compilation failure
+    at org.apache.maven.plugin.compiler.AbstractCompilerMojo.execute (AbstractCompilerMojo.java:1212)
+    at org.apache.maven.plugin.compiler.CompilerMojo.execute (CompilerMojo.java:193)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:903)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:280)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:203)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+[ERROR] 
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

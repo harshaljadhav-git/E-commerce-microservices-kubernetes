@@ -1,0 +1,109 @@
+pipeline {
+    agent any
+
+    environment {
+        CI = 'true'
+        // ECR_REGISTRY should be set in Jenkins credentials or environment
+        ECR_REGISTRY = "12345.ecr.aws" 
+        APP_NAME = "api-gateway"
+        GITOPS_REPO_URL = "https://github.com/your-org/gitops-repo.git" // Replace with your GitOps repo URL
+        // GITOPS_CREDENTIALS should be set in Jenkins for the GitOps repo
+        GITOPS_CREDENTIALS = "gitops-repo-credentials" 
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    checkout scm
+                }
+            }
+        }
+
+        stage('Build & Test') {
+            steps {
+                script {
+                    // This assumes a Maven project, adjust if it's different
+                    sh './mvnw clean install'
+                }
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    // This assumes SonarQube is configured in your Jenkins instance
+                    // and a sonar-project.properties file exists
+                    withSonarQubeEnv('MySonarQubeServer') {
+                        sh './mvnw sonar:sonar'
+                    }
+                }
+            }
+        }
+        
+        stage('Quality Gate') {
+            steps {
+                script {
+                    // This will wait for the SonarQube analysis to complete
+                    // and fail the pipeline if the Quality Gate is not passed
+                    timeout(time: 1, unit: 'HOURS') {
+                        waitForQualityGate abortPipeline: true
+                    }
+                }
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    def commitHash = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
+                    docker.build("${ECR_REGISTRY}/${APP_NAME}:${commitHash}", "./${APP_NAME}")
+                }
+            }
+        }
+
+        stage('Scan Image with Trivy') {
+            steps {
+                script {
+                    def commitHash = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
+                    // Fail the build if Trivy finds CRITICAL vulnerabilities
+                    sh "trivy image --exit-code 1 --severity CRITICAL ${ECR_REGISTRY}/${APP_NAME}:${commitHash}"
+                }
+            }
+        }
+
+        stage('Push to ECR') {
+            steps {
+                script {
+                    def commitHash = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
+                    // Assumes ECR login is handled, e.g., via an IAM role for the Jenkins agent
+                    docker.withRegistry("https://${ECR_REGISTRY}", 'ecr:us-east-1:aws-credentials') {
+                        docker.image("${ECR_REGISTRY}/${APP_NAME}:${commitHash}").push()
+                    }
+                }
+            }
+        }
+
+        stage('Update GitOps Repository') {
+            steps {
+                script {
+                    def commitHash = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
+                    dir('gitops-repo') {
+                        git credentialsId: GITOPS_CREDENTIALS, url: GITOPS_REPO_URL
+                        
+                        // Use a tool like 'yq' to update the YAML file
+                        // This is more robust than using sed
+                        sh "yq e '.spec.template.spec.containers[0].image = "${ECR_REGISTRY}/${APP_NAME}:${commitHash}"' -i ${APP_NAME}/kubernetes/deployment.yaml"
+                        
+                        git config --global user.email "jenkins@example.com"
+                        git config --global user.name "Jenkins"
+                        
+                        git add "${APP_NAME}/kubernetes/deployment.yaml"
+                        git commit -m "Update ${APP_NAME} image to ${commitHash}"
+                        git push origin main
+                    }
+                }
+            }
+        }
+    }
+}

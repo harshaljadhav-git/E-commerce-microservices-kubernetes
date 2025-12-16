@@ -1,0 +1,117 @@
+'''
+<div class="container">
+  <header class="header">
+    <div class="shop-admin">Shop Admin</div>
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Search" />
+    </div>
+    <div class="user-options">
+      <a href="#" class="user-link">Account</a>
+      <a href="#" class="user-link">Cart</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="spring-sale">
+      <div class="sale-content">
+        <h1>Spring Sale • Up to 50% off select items</h1>
+        <p>Discover featured products and limited-time promotions across electronics, apparel, and home.</p>
+        <div class="sale-buttons">
+          <button class="shop-featured-btn">Shop Featured</button>
+          <button class="view-deals-btn">View Deals</button>
+        </div>
+      </div>
+      <div class="sale-image">
+        <img src="https://via.placeholder.com/400x200" alt="Modern" />
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="category-item"><span>📱</span> Electronics</div>
+      <div class="category-item"><span>👕</span> Apparel</div>
+      <div class="category-item"><span>🏠</span> Home</div>
+      <div class="category-item"><span>👜</span> Accessories</div>
+      <div class="category-item"><span>👧</span> Kids</div>
+      <div class="category-item"><span>🎧</span> Audio</div>
+    </section>
+
+    <section class="trending-products">
+      <h2>Trending Products</h2>
+      <div class="product-grid">
+        <div class="product-card"
+          *ngFor="let product of ['Wireless Headphones', 'Smartwatch Pro', 'Minimal Sneakers', 'Compact Sofa', 'DSLR Camera', 'Gaming Keyboard']">
+          <img src="https://via.placeholder.com/150" alt="{{ product }}" />
+          <h3>{{ product }}</h3>
+          <div class="product-info">
+            <span class="rating">⭐ 4.5</span>
+            <span class="price">$199</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="special-offers">
+      <h2>Special Offers</h2>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <img src="https://via.placeholder.com/200x100" alt="Work-from-Home Kit" />
+          <div class="offer-content">
+            <span class="bundle">Bundle</span>
+            <h3>Work-from-Home Kit</h3>
+            <p>Save 30% • Ends soon</p>
+            <div class="countdown">02h 15m 37s</div>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="https://via.placeholder.com/200x100" alt="Performance Runners" />
+          <div class="offer-content">
+            <span class="limited">Limited</span>
+            <h3>Performance Runners</h3>
+            <p>Flash deal</p>
+            <div class="countdown">05h 42m 09s</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-arrivals">
+      <h2>New Arrivals</h2>
+      <div class="product-grid">
+        <div class="product-card" *ngFor="let product of ['Portable Speaker', 'Urban Backpack', 'Desk Lamp']">
+          <img src="https://via.placeholder.com/150" alt="{{ product }}" />
+          <h3>{{ product }}</h3>
+          <div class="product-info">
+            <span class="rating">⭐ 4.2 • $59</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="customer-reviews">
+      <h2>What Customers Say</h2>
+      <div class="reviews-grid">
+        <div class="review-card" *ngFor="let review of [1, 2, 3]">
+          <div class="review-author">
+            <img src="https://via.placeholder.com/40" alt="Customer" />
+            <div>
+              <h3>Alex Johnson</h3>
+              <p>⭐ 4.8 • Fast shipping, great quality!</p>
+            </div>
+          </div>
+          <p>Loved the selection and checkout was seamless.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Join our newsletter</h2>
+      <p>Get product updates, deals, and curated picks weekly.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Email address" />
+        <button>Subscribe</button>
+      </div>
+    </section>
+  </main>
+</div>
+'''
