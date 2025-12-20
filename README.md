@@ -1,4 +1,4 @@
-# God-Level E-Commerce Microservices Platform
+# E-Commerce Microservices Platform
 
 A comprehensive, production-ready E-commerce microservices platform built with **Spring Boot 3**, **Angular 19**, **Kubernetes (EKS)**, and **Terraform**. Designed for high scalability, resilience, and "Rock Solid" reliability.
 
