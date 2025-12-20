@@ -1,0 +1,14 @@
+# k8s/base/services/search-service-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: search-service
+  namespace: ecommerce
+spec:
+  selector:
+    app: search-service
+  ports:
+    - protocol: TCP
+      port: 8093
+      targetPort: 8093
+  type: ClusterIP

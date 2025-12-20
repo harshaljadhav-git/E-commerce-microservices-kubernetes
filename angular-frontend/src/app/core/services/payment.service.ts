@@ -10,12 +10,14 @@ export interface Payment {
     transactionId: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class PaymentService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8085/api/payments'; // Payment Service
+    private apiUrl = `${environment.apiUrl}/payments`; // Payment Service
 
     getPayments(): Observable<any> {
         return this.http.get<any>(this.apiUrl);

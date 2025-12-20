@@ -9,12 +9,14 @@ export interface Tax {
     location: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class TaxService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8091/api/taxes'; // Tax Service
+    private apiUrl = `${environment.apiUrl}/taxes`; // Tax Service
 
     getTaxes(): Observable<any> {
         return this.http.get<any>(this.apiUrl);

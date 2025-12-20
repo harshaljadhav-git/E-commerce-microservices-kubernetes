@@ -10,12 +10,14 @@ export interface Rating {
     comment: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class RatingService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8089/api/ratings'; // Rating Service
+    private apiUrl = `${environment.apiUrl}/ratings`; // Rating Service
 
     getRatings(): Observable<any> {
         return this.http.get<any>(this.apiUrl);

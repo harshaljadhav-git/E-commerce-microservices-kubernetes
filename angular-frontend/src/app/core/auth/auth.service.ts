@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, tap, catchError, throwError } from 'rxjs';
 import { jwtDecode } from 'jwt-decode';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +12,9 @@ export class AuthService {
     private http = inject(HttpClient);
     private router = inject(Router);
 
-    private apiUrl = 'http://localhost:8088/api/auth'; // User Service
+
+
+    private apiUrl = `${environment.apiUrl}/auth`; // User Service
     private currentUserSubject = new BehaviorSubject<any>(this.getUserFromToken());
     public currentUser$ = this.currentUserSubject.asObservable();
 

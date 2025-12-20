@@ -13,12 +13,14 @@ export interface Product {
     categoryId?: number;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class ProductService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8086/api/products'; // Product Service
+    private apiUrl = `${environment.apiUrl}/products`; // Product Service
 
     getProducts(page: number = 0, size: number = 10, search?: string): Observable<any> {
         let params = new HttpParams()

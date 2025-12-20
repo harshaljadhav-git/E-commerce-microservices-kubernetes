@@ -1,0 +1,84 @@
+# Global settings
+redis:
+  enabled: true
+  architecture: standalone
+  auth:
+    enabled: false # Dev mode only
+  master:
+    persistence:
+      enabled: false
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 250m
+        memory: 256Mi
+
+kafka:
+  enabled: true
+  replicaCount: 1
+  zookeeper:
+    replicaCount: 1
+    persistence:
+      enabled: false
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: 250m
+        memory: 512Mi
+  persistence:
+    enabled: false
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+  # Simplified listener config for internal access
+  listeners:
+    client:
+      protocol: PLAINTEXT
+    interbroker:
+      protocol: PLAINTEXT
+
+mongodb:
+  enabled: true
+  architecture: standalone
+  auth:
+    enabled: true
+    rootPassword: "password"
+    usernames: ["admin"]
+    passwords: ["password"]
+    databases: ["ecommerce"]
+  persistence:
+    enabled: false
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+opensearch:
+  enabled: true
+  replicas: 1
+  singleNode: true
+  persistence:
+    enabled: false
+  resources:
+    requests:
+      cpu: 500m
+      memory: 1Gi
+    limits:
+      cpu: 1000m
+      memory: 2Gi
+  # Disable security plugin for simple dev setup if desired, 
+  # but standard OpenSearch usually needs HTTPS. Keeping defaults often best.
+  config:
+    opensearch.yml:
+      plugins.security.disabled: true # Dev mode customization

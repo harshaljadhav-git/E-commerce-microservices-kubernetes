@@ -10,12 +10,14 @@ export interface Shipping {
     shippingStatus: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class ShippingService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8087/api/shipping'; // Shipping Service
+    private apiUrl = `${environment.apiUrl}/shipping`; // Shipping Service
 
     getShipments(): Observable<any> {
         return this.http.get<any>(this.apiUrl);

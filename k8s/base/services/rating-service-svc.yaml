@@ -1,0 +1,14 @@
+# k8s/base/services/rating-service-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: rating-service
+  namespace: ecommerce
+spec:
+  selector:
+    app: rating-service
+  ports:
+    - protocol: TCP
+      port: 8089
+      targetPort: 8089
+  type: ClusterIP
