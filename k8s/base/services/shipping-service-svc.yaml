@@ -1,0 +1,14 @@
+# k8s/base/services/shipping-service-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: shipping-service
+  namespace: ecommerce
+spec:
+  selector:
+    app: shipping-service
+  ports:
+    - protocol: TCP
+      port: 8087
+      targetPort: 8087
+  type: ClusterIP

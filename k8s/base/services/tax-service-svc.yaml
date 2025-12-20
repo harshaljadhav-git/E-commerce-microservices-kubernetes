@@ -1,0 +1,14 @@
+# k8s/base/services/tax-service-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: tax-service
+  namespace: ecommerce
+spec:
+  selector:
+    app: tax-service
+  ports:
+    - protocol: TCP
+      port: 8091
+      targetPort: 8091
+  type: ClusterIP

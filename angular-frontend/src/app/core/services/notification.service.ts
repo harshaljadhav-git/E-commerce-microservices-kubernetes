@@ -10,12 +10,14 @@ export interface Notification {
     sentAt: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class NotificationService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8083/api/notifications'; // Notification Service
+    private apiUrl = `${environment.apiUrl}/notifications`; // Notification Service
 
     getNotifications(): Observable<any> {
         return this.http.get<any>(this.apiUrl);

@@ -8,12 +8,14 @@ export interface InventoryItem {
     quantity: number;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class InventoryService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8082/api/inventory'; // Inventory Service
+    private apiUrl = `${environment.apiUrl}/inventory`; // Inventory Service
 
     getInventory(skuCode?: string): Observable<any> {
         const url = skuCode ? `${this.apiUrl}/${skuCode}` : this.apiUrl;

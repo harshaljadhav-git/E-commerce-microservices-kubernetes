@@ -1,0 +1,57 @@
+# k8s/logging/elasticsearch.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: es-cluster
+  namespace: ecommerce
+spec:
+  serviceName: elasticsearch
+  replicas: 1 # Single node for demo/cost
+  selector:
+    matchLabels:
+      app: elasticsearch
+  template:
+    metadata:
+      labels:
+        app: elasticsearch
+    spec:
+      containers:
+      - name: elasticsearch
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.17.9
+        resources:
+            requests:
+                memory: "1Gi"
+                cpu: "500m"
+            limits:
+                memory: "2Gi"
+                cpu: "1000m"
+        ports:
+        - containerPort: 9200
+          name: rest
+          protocol: TCP
+        - containerPort: 9300
+          name: inter-node
+          protocol: TCP
+        env:
+        - name: discovery.type
+          value: single-node
+        - name: ES_JAVA_OPTS
+          value: "-Xms512m -Xmx512m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: elasticsearch
+  namespace: ecommerce
+  labels:
+    app: elasticsearch
+spec:
+  ports:
+  - port: 9200
+    name: rest
+    protocol: TCP
+  - port: 9300
+    name: inter-node
+    protocol: TCP
+  selector:
+    app: elasticsearch

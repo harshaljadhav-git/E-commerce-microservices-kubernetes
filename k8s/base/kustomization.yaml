@@ -1,0 +1,49 @@
+# k8s/base/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  # Base Setup
+  - namespace.yaml
+  - configmaps/application-config.yaml
+  - secrets/database-secrets.yaml
+  
+  # Deployments
+  - deployments/api-gateway.yaml
+  - deployments/discovery-service.yaml
+  - deployments/user-service.yaml
+  - deployments/product-service.yaml
+  - deployments/order-service.yaml
+  - deployments/inventory-service.yaml
+  - deployments/payment-service.yaml
+  - deployments/shipping-service.yaml
+  - deployments/notification-service.yaml
+  - deployments/search-service.yaml
+  - deployments/promotion-service.yaml
+  - deployments/rating-service.yaml
+  - deployments/tax-service.yaml
+  - deployments/favourite-service.yaml
+  - deployments/frontend.yaml
+  
+  # Services
+  - services/api-gateway-svc.yaml
+  - services/discovery-service-svc.yaml
+  - services/user-service-svc.yaml
+  - services/product-service-svc.yaml
+  - services/order-service-svc.yaml
+  - services/inventory-service-svc.yaml
+  - services/payment-service-svc.yaml
+  - services/shipping-service-svc.yaml
+  - services/notification-service-svc.yaml
+  - services/search-service-svc.yaml
+  - services/promotion-service-svc.yaml
+  - services/rating-service-svc.yaml
+  - services/tax-service-svc.yaml
+  - services/favourite-service-svc.yaml
+  - services/frontend-svc.yaml
+  
+  # Ingress
+  - ingress/ingress.yaml
+
+  # Autoscaling
+  - hpa/hpa.yaml

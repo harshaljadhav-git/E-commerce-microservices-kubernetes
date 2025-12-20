@@ -1,0 +1,14 @@
+# k8s/base/services/discovery-service-svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: discovery-service
+  namespace: ecommerce
+spec:
+  selector:
+    app: discovery-service
+  ports:
+    - protocol: TCP
+      port: 8761
+      targetPort: 8761
+  type: ClusterIP

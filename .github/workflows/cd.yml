@@ -1,0 +1,73 @@
+# .github/workflows/cd.yml
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  AWS_REGION: us-east-1
+  ECR_REPOSITORY_PREFIX: ecommerce
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [
+          api-gateway,
+          discovery-service,
+          user-service,
+          product-service,
+          order-service,
+          inventory-service,
+          payment-service,
+          shipping-service,
+          notification-service,
+          search-service,
+          promotion-service,
+          rating-service,
+          tax-service,
+          favourite-service,
+          angular-frontend
+        ]
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          # role-to-assume: arn:aws:iam::ACCOUNT_ID:role/GithubActionsRole
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          # Determine Dockerfile path
+          if [ "${{ matrix.service }}" == "angular-frontend" ]; then
+            DOCKERFILE_PATH="./angular-frontend/Dockerfile"
+            CONTEXT_PATH="./angular-frontend"
+          else
+            DOCKERFILE_PATH="./${{ matrix.service }}/Dockerfile"
+            CONTEXT_PATH="."
+          fi
+          
+          echo "Building ${{ matrix.service }}..."
+          docker build -t $ECR_REGISTRY/${{ env.ECR_REPOSITORY_PREFIX }}-${{ matrix.service }}:$IMAGE_TAG -f $DOCKERFILE_PATH $CONTEXT_PATH
+          docker tag $ECR_REGISTRY/${{ env.ECR_REPOSITORY_PREFIX }}-${{ matrix.service }}:$IMAGE_TAG $ECR_REGISTRY/${{ env.ECR_REPOSITORY_PREFIX }}-${{ matrix.service }}:latest
+          
+          echo "Pushing ${{ matrix.service }}..."
+          docker push $ECR_REGISTRY/${{ env.ECR_REPOSITORY_PREFIX }}-${{ matrix.service }}:$IMAGE_TAG
+          docker push $ECR_REGISTRY/${{ env.ECR_REPOSITORY_PREFIX }}-${{ matrix.service }}:latest

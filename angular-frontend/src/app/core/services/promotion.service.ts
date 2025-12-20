@@ -9,12 +9,14 @@ export interface Promotion {
     expiryDate: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class PromotionService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8092/api/promotions'; // Promotion Service
+    private apiUrl = `${environment.apiUrl}/promotions`; // Promotion Service
 
     getPromotions(): Observable<any> {
         return this.http.get<any>(this.apiUrl);

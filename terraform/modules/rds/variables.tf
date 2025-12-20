@@ -1,0 +1,20 @@
+# terraform/modules/rds/variables.tf
+variable "identifier" { type = string }
+variable "engine" { type = string }
+variable "engine_version" { type = string }
+variable "instance_class" { type = string }
+variable "allocated_storage" { type = number }
+variable "storage_encrypted" { type = bool }
+variable "database_name" { type = string }
+variable "master_username" { type = string }
+variable "master_password" { type = string }
+variable "vpc_id" { type = string }
+variable "subnet_ids" { type = list(string) }
+variable "allowed_cidr_blocks" { type = list(string) }
+variable "backup_retention_period" { type = number }
+variable "preferred_backup_window" { type = string }
+variable "multi_az" { type = bool }
+variable "deletion_protection" { type = bool }
+variable "skip_final_snapshot" { type = bool }
+variable "performance_insights_enabled" { type = bool }
+variable "tags" { type = map(string) }

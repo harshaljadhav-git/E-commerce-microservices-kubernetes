@@ -13,12 +13,14 @@ export interface Order {
     status: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class OrderService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8084/api/order'; // Order Service
+    private apiUrl = `${environment.apiUrl}/order`; // Order Service
 
     getOrders(page: number = 0, size: number = 10): Observable<any> {
         return this.http.get<any>(this.apiUrl);

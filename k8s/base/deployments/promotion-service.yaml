@@ -1,0 +1,56 @@
+# k8s/base/deployments/promotion-service.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: promotion-service
+  namespace: ecommerce
+  labels:
+    app: promotion-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: promotion-service
+  template:
+    metadata:
+      labels:
+        app: promotion-service
+    spec:
+      containers:
+        - name: promotion-service
+          image: promotion-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8092
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
+            - name: EUREKA_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: eureka.uri
+            - name: SPRING_DATA_MONGODB_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: spring.data.mongodb.uri
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8092
+            initialDelaySeconds: 45
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8092
+            initialDelaySeconds: 30
+            periodSeconds: 10

@@ -9,12 +9,14 @@ export interface Favourite {
     addedAt: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class FavouriteService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8081/api/favourites'; // Favourite Service
+    private apiUrl = `${environment.apiUrl}/favourites`; // Favourite Service
 
     getFavourites(): Observable<any> {
         return this.http.get<any>(this.apiUrl);

@@ -1,14 +1,50 @@
-# Build stage
-FROM maven:3.8.5-openjdk-17 AS build
+# product-service/Dockerfile
+# Stage 1: Build
+FROM maven:3.8.5-eclipse-temurin-17-alpine AS build
 WORKDIR /app
-COPY . .
-# The -am flag also builds project dependencies
-RUN mvn -pl product-service -am clean package -DskipTests
 
-# Runtime stage
-FROM eclipse-temurin:17-jre-jammy
+# Copy parent pom first for better caching
+COPY pom.xml .
+COPY product-service/pom.xml ./product-service/
+
+# Download dependencies (cached layer)
+RUN mvn dependency:go-offline -B -pl product-service -am
+
+# Copy source code
+COPY product-service/src ./product-service/src
+
+# Build the application
+RUN mvn clean package -DskipTests -pl product-service -am
+
+# Stage 2: Runtime
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-# The path to the jar file will be inside the module's target directory
-COPY --from=build /app/product-service/target/product-service-0.0.1-SNAPSHOT.jar app.jar
-EXPOSE 8081
-ENTRYPOINT ["java","-jar","app.jar"]
+
+# Create non-root user
+RUN addgroup -g 1001 appgroup && \
+    adduser -u 1001 -G appgroup -s /bin/sh -D appuser
+
+# Copy JAR from build stage
+COPY --from=build --chown=appuser:appgroup \
+    /app/product-service/target/*.jar app.jar
+
+# Switch to non-root user
+USER appuser
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
+    CMD wget --no-verbose --tries=1 --spider http://localhost:8086/actuator/health || exit 1
+
+# Expose port
+EXPOSE 8086
+
+# JVM tuning for containers
+ENV JAVA_OPTS="-XX:+UseContainerSupport \
+    -XX:MaxRAMPercentage=75.0 \
+    -XX:InitialRAMPercentage=50.0 \
+    -XX:+UseG1GC \
+    -XX:+HeapDumpOnOutOfMemoryError \
+    -XX:HeapDumpPath=/tmp/heapdump.hprof"
+
+# Run application
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]

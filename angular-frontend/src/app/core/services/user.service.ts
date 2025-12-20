@@ -11,12 +11,14 @@ export interface User {
     role: string;
 }
 
+import { environment } from '../../../environments/environment';
+
 @Injectable({
     providedIn: 'root'
 })
 export class UserService {
     private http = inject(HttpClient);
-    private apiUrl = 'http://localhost:8088/api/users'; // User Service
+    private apiUrl = `${environment.apiUrl}/users`; // User Service
 
     getUsers(): Observable<any> {
         return this.http.get<any>(this.apiUrl);

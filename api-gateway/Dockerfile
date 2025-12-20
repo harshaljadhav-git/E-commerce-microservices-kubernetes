@@ -1,30 +1,50 @@
-# Build stage
-# Use a specific Maven version for reproducibility
-FROM maven:3.8.5-openjdk-17 AS build
-
-# Set the working directory
+# api-gateway/Dockerfile
+# Stage 1: Build
+FROM maven:3.8.5-eclipse-temurin-17-alpine AS build
 WORKDIR /app
 
-# Copy the entire project context
-# This is better than copying poms and source separately
-COPY . .
+# Copy parent pom first for better caching
+COPY pom.xml .
+COPY api-gateway/pom.xml ./api-gateway/
 
-# Build the specific module and its dependencies
-# The -am flag also builds project dependencies from the reactor
-RUN mvn -pl api-gateway -am clean package -DskipTests
+# Download dependencies (cached layer)
+RUN mvn dependency:go-offline -B -pl api-gateway -am
 
-# Runtime stage
-# Use a slim JRE image for a smaller final image
-FROM eclipse-temurin:17-jre-jammy
+# Copy source code
+COPY api-gateway/src ./api-gateway/src
 
+# Build the application
+RUN mvn clean package -DskipTests -pl api-gateway -am
+
+# Stage 2: Runtime
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
-# Copy the built jar from the build stage
-# The path to the jar file will be inside the module's target directory
-COPY --from=build /app/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar app.jar
+# Create non-root user
+RUN addgroup -g 1001 appgroup && \
+    adduser -u 1001 -G appgroup -s /bin/sh -D appuser
 
-# Expose the port the application runs on
-EXPOSE 8888
+# Copy JAR from build stage
+COPY --from=build --chown=appuser:appgroup \
+    /app/api-gateway/target/*.jar app.jar
 
-# Run the application
-ENTRYPOINT ["java","-jar","app.jar"]
+# Switch to non-root user
+USER appuser
+
+# Health check (API Gateway often uses /actuator/health)
+HEALTHCHECK --interval=30s --timeout=3s --start-period=60s --retries=3 \
+    CMD wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1
+
+# Expose port
+EXPOSE 8080
+
+# JVM tuning for containers
+ENV JAVA_OPTS="-XX:+UseContainerSupport \
+    -XX:MaxRAMPercentage=75.0 \
+    -XX:InitialRAMPercentage=50.0 \
+    -XX:+UseG1GC \
+    -XX:+HeapDumpOnOutOfMemoryError \
+    -XX:HeapDumpPath=/tmp/heapdump.hprof"
+
+# Run application
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
