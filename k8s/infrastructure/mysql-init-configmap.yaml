@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-init-script
+  namespace: ecommerce
+data:
+  init.sql: |
+    -- Create all microservice databases
+    CREATE DATABASE IF NOT EXISTS userservice;
+    CREATE DATABASE IF NOT EXISTS productservice;
+    CREATE DATABASE IF NOT EXISTS orderservice;
+    CREATE DATABASE IF NOT EXISTS inventoryservice;
+    CREATE DATABASE IF NOT EXISTS paymentservice;
+    CREATE DATABASE IF NOT EXISTS shippingservice;
+    CREATE DATABASE IF NOT EXISTS ratingservice;
+    CREATE DATABASE IF NOT EXISTS taxservice;
+    CREATE DATABASE IF NOT EXISTS favouriteservice;
+    
+    -- Grant permissions to root user (for dev/demo)
+    GRANT ALL PRIVILEGES ON userservice.* TO 'root'@'%';
+    GRANT ALL PRIVILEGES ON productservice.* TO 'root'@'%';
+    GRANT ALL PRIVILEGES ON orderservice.* TO 'root'@'%';
+    GRANT ALL PRIVILEGES ON inventoryservice.* TO 'root'@'%';
+    GRANT ALL PRIVILEGES ON paymentservice.* TO 'root'@'%';
+    GRANT ALL PRIVILEGES ON shippingservice.* TO 'root'@'%';
+    GRANT ALL PRIVILEGES ON ratingservice.* TO 'root'@'%';
+    GRANT ALL PRIVILEGES ON taxservice.* TO 'root'@'%';
+    GRANT ALL PRIVILEGES ON favouriteservice.* TO 'root'@'%';
+    
+    FLUSH PRIVILEGES;

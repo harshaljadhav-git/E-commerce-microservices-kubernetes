@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 
 export interface Product {
     id?: number;
-    name: string;
+    productTitle: string;
     sku: string;
-    price: number;
+    priceUnit: number;
     quantity: number;
     description: string;
     imageUrl?: string;
@@ -51,6 +51,6 @@ export class ProductService {
     }
 
     getCategories(): Observable<any[]> {
-        return this.http.get<any[]>('http://localhost:8086/api/categories');
+        return this.http.get<any[]>(`${environment.apiUrl}/categories`);
     }
 }

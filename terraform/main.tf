@@ -21,14 +21,14 @@ terraform {
     }
   }
   
-  backend "s3" {
-    bucket         = "ecommerce-terraform-state"
-    key            = "prod/terraform.tfstate"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "terraform-state-lock"
-    # kms_key_id     = "arn:aws:kms:us-east-1:ACCOUNT_ID:key/KEY_ID" # Uncomment and replace in real use
-  }
+  # backend "s3" {
+  #   bucket         = "ecommerce-terraform-state"
+  #   key            = "prod/terraform.tfstate"
+  #   region         = "us-east-1"
+  #   encrypt        = true
+  #   dynamodb_table = "terraform-state-lock"
+  #   # kms_key_id     = "arn:aws:kms:us-east-1:ACCOUNT_ID:key/KEY_ID" # Uncomment and replace in real use
+  # }
 }
 
 provider "aws" {
@@ -109,7 +109,7 @@ module "eks" {
       instance_types = ["t3.large", "t3a.large"]
       capacity_type  = "SPOT"
       labels = { role = "spot" }
-      taints = [{ key = "spot", value = "true", effect = "NoSchedule" }]
+      taints = [{ key = "spot", value = "true", effect = "NO_SCHEDULE" }]
     }
   }
   
@@ -119,38 +119,39 @@ module "eks" {
 }
 
 # RDS Module
-module "rds" {
-  source = "./modules/rds"
-  
-  identifier = "ecommerce-${var.environment}-db"
-  
-  engine               = "aurora-mysql"
-  engine_version       = "8.0.mysql_aurora.3.04.0"
-  instance_class       = var.environment == "prod" ? "db.r6g.large" : "db.t3.medium"
-  allocated_storage    = 100
-  storage_encrypted    = true
-  
-  database_name  = "ecommerce"
-  master_username = var.db_master_username
-  master_password = var.db_master_password
-  
-  vpc_id             = module.vpc.vpc_id
-  subnet_ids         = module.vpc.database_subnet_ids
-  allowed_cidr_blocks = module.vpc.private_subnet_cidrs
-  
-  backup_retention_period = var.environment == "prod" ? 30 : 7
-  preferred_backup_window = "03:00-04:00"
-  
-  multi_az               = var.environment == "prod" ? true : false
-  deletion_protection    = var.environment == "prod" ? true : false
-  skip_final_snapshot    = var.environment != "prod"
-  
-  performance_insights_enabled = true
-  
-  tags = local.common_tags
-  
-  depends_on = [module.vpc]
-}
+# RDS Module
+# module "rds" {
+#   source = "./modules/rds"
+#   
+#   identifier = "ecommerce-${var.environment}-db"
+#   
+#   engine               = "aurora-mysql"
+#   engine_version       = "8.0.mysql_aurora.3.04.0"
+#   instance_class       = var.environment == "prod" ? "db.r6g.large" : "db.t3.medium"
+#   allocated_storage    = 100
+#   storage_encrypted    = true
+#   
+#   database_name  = "ecommerce"
+#   master_username = var.db_master_username
+#   master_password = var.db_master_password
+#   
+#   vpc_id             = module.vpc.vpc_id
+#   subnet_ids         = module.vpc.database_subnet_ids
+#   allowed_cidr_blocks = module.vpc.private_subnet_cidrs
+#   
+#   backup_retention_period = var.environment == "prod" ? 30 : 7
+#   preferred_backup_window = "03:00-04:00"
+#   
+#   multi_az               = var.environment == "prod" ? true : false
+#   deletion_protection    = var.environment == "prod" ? true : false
+#   skip_final_snapshot    = var.environment != "prod"
+#   
+#   performance_insights_enabled = true
+#   
+#   tags = local.common_tags
+#   
+#   depends_on = [module.vpc]
+# }
 
 # DocumentDB Module -> Commented out until implementation to avoid init errors
 # module "documentdb" { ... }

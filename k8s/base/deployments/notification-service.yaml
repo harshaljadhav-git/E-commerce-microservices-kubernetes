@@ -1,4 +1,3 @@
-# k8s/base/deployments/notification-service.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,7 +23,10 @@ spec:
             - containerPort: 8083
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: "prod"
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: spring.profiles.active
             - name: EUREKA_URI
               valueFrom:
                 configMapKeyRef:
@@ -34,12 +36,14 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: app-config
-                  key: spring.data.mongodb.uri
+                  key: notification.mongodb.uri
             - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
               valueFrom:
                 configMapKeyRef:
                   name: app-config
                   key: spring.kafka.bootstrap-servers
+            - name: LOGGING_FILE_NAME
+              value: ""
           resources:
             requests:
               memory: "256Mi"

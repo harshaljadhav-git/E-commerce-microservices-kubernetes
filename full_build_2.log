@@ -1,0 +1,667 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] ecommerce-microservices                                            [pom]
+[INFO] shipping-service                                                   [jar]
+[INFO] notification-service                                               [jar]
+[INFO] order-service                                                      [jar]
+[INFO] payment-service                                                    [jar]
+[INFO] product-service                                                    [jar]
+[INFO] inventory-server                                                   [jar]
+[INFO] favourite-service                                                  [jar]
+[INFO] search                                                             [jar]
+[INFO] user-service                                                       [jar]
+[INFO] api-gateway                                                        [jar]
+[INFO] discovery-server                                                   [jar]
+[INFO] proxy-client                                                       [jar]
+[INFO] promotion-service                                                  [jar]
+[INFO] rating-service                                                     [jar]
+[INFO] tax-service                                                        [jar]
+[INFO] 
+[INFO] --------------< com.hoangtien2k3:ecommerce-microservices >--------------
+[INFO] Building ecommerce-microservices 1.0-SNAPSHOT                     [1/16]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ ecommerce-microservices ---
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ ecommerce-microservices ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\ecommerce-microservices\1.0-SNAPSHOT\ecommerce-microservices-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------------< com.hoangtien2k3:shipping-service >------------------
+[INFO] Building shipping-service 0.0.1-SNAPSHOT                          [2/16]
+[INFO]   from shipping-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ shipping-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\shipping-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ shipping-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ shipping-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 21 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ shipping-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\shipping-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ shipping-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ shipping-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ shipping-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\shipping-service\target\shipping-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ shipping-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\shipping-service\target\shipping-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\shipping-service\target\shipping-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ shipping-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\shipping-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\shipping-service\0.0.1-SNAPSHOT\shipping-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\shipping-service\target\shipping-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\shipping-service\0.0.1-SNAPSHOT\shipping-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ---------------< com.hoangtien2k3:notification-service >----------------
+[INFO] Building notification-service 0.0.1-SNAPSHOT                      [3/16]
+[INFO]   from notification-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ notification-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\notification-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ notification-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ notification-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 27 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ notification-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\notification-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ notification-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ notification-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ notification-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\notification-service\target\notification-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ notification-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\notification-service\target\notification-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\notification-service\target\notification-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ notification-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\notification-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\notification-service\0.0.1-SNAPSHOT\notification-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\notification-service\target\notification-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\notification-service\0.0.1-SNAPSHOT\notification-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -------------------< com.hoangtien2k3:order-service >-------------------
+[INFO] Building order-service 0.0.1-SNAPSHOT                             [4/16]
+[INFO]   from order-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ order-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\order-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ order-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ order-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 39 source files with javac [debug release 17] to target\classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtTokenFilter.java: Some input files use or override a deprecated API.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/order-service/src/main/java/com/hoangtien2k3/orderservice/security/JwtTokenFilter.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ order-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\order-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ order-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ order-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ order-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\order-service\target\order-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ order-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\order-service\target\order-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\order-service\target\order-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ order-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\order-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\order-service\0.0.1-SNAPSHOT\order-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\order-service\target\order-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\order-service\0.0.1-SNAPSHOT\order-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.hoangtien2k3:payment-service >------------------
+[INFO] Building payment-service 0.0.1-SNAPSHOT                           [5/16]
+[INFO]   from payment-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ payment-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\payment-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ payment-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ payment-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 33 source files with javac [debug release 17] to target\classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java: Some input files use or override a deprecated API.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/payment-service/src/main/java/com/hoangtien2k3/paymentservice/security/JwtProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ payment-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\payment-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ payment-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ payment-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ payment-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\payment-service\target\payment-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ payment-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\payment-service\target\payment-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\payment-service\target\payment-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ payment-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\payment-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\payment-service\0.0.1-SNAPSHOT\payment-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\payment-service\target\payment-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\payment-service\0.0.1-SNAPSHOT\payment-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.hoangtien2k3:product-service >------------------
+[INFO] Building product-service 0.0.1-SNAPSHOT                           [6/16]
+[INFO]   from product-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ product-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\product-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ product-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ product-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 25 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ product-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\product-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ product-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ product-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ product-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\product-service\target\product-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ product-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\product-service\target\product-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\product-service\target\product-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ product-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\product-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\product-service\0.0.1-SNAPSHOT\product-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\product-service\target\product-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\product-service\0.0.1-SNAPSHOT\product-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -----------------< com.hoangtien2k3:inventory-service >-----------------
+[INFO] Building inventory-server 0.0.1-SNAPSHOT                          [7/16]
+[INFO]   from inventory-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ inventory-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\inventory-service\target
+[INFO] 
+[INFO] --- jacoco:0.8.8:prepare-agent (default-prepare-agent) @ inventory-service ---
+[INFO] argLine set to -javaagent:C:\\Users\\harsh\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.8\\org.jacoco.agent-0.8.8-runtime.jar=destfile=C:\\Workspace\\E-commerce-microservices-kubernetes-main\\inventory-service\\target\\jacoco.exec,excludes=**/model/**:**/configuration/**:**/ProfileserviceApplication.*:**/Constant.*
+[INFO] 
+[INFO] --- jacoco:0.8.8:prepare-agent (default) @ inventory-service ---
+[INFO] argLine set to -javaagent:C:\\Users\\harsh\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.8\\org.jacoco.agent-0.8.8-runtime.jar=destfile=C:\\Workspace\\E-commerce-microservices-kubernetes-main\\inventory-service\\target\\jacoco.exec,excludes=**/model/**:**/configuration/**:**/ProfileserviceApplication.*:**/Constant.*
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ inventory-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ inventory-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 13 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ inventory-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\inventory-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ inventory-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ inventory-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco:0.8.8:report (default-report) @ inventory-service ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ inventory-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\inventory-service\target\inventory-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ inventory-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\inventory-service\target\inventory-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\inventory-service\target\inventory-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- jacoco:0.8.8:report (report) @ inventory-service ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ inventory-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\inventory-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\inventory-service\0.0.1-SNAPSHOT\inventory-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\inventory-service\target\inventory-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\inventory-service\0.0.1-SNAPSHOT\inventory-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ---------------< com.hoangtien2k3qx1:favourite-service >----------------
+[INFO] Building favourite-service 0.0.1-SNAPSHOT                         [8/16]
+[INFO]   from favourite-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ favourite-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\favourite-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ favourite-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ favourite-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 20 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ favourite-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\favourite-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ favourite-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ favourite-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ favourite-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\favourite-service\target\favourite-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ favourite-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\favourite-service\target\favourite-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\favourite-service\target\favourite-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ favourite-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\favourite-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3qx1\favourite-service\0.0.1-SNAPSHOT\favourite-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\favourite-service\target\favourite-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3qx1\favourite-service\0.0.1-SNAPSHOT\favourite-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.hoangtien2k3:search-service >-------------------
+[INFO] Building search 0.0.1-SNAPSHOT                                    [9/16]
+[INFO]   from search-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ search-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\search-service\target
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default-prepare-agent) @ search-service ---
+[INFO] argLine set to -javaagent:C:\\Users\\harsh\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Workspace\\E-commerce-microservices-kubernetes-main\\search-service\\target\\jacoco.exec,excludes=com/hoangtien2k3/**/*Application.class
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ search-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ search-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 29 source files with javac [debug release 17] to target\classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/search-service/src/main/java/com/hoangtien2k3/search/service/ProductService.java: C:\Workspace\E-commerce-microservices-kubernetes-main\search-service\src\main\java\com\hoangtien2k3\search\service\ProductService.java uses unchecked or unsafe operations.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/search-service/src/main/java/com/hoangtien2k3/search/service/ProductService.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ search-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\search-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ search-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 4 source files with javac [debug release 17] to target\test-classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/search-service/src/test/java/com/hoangtien2k3/search/service/ProductSyncDataServiceTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/search-service/src/test/java/com/hoangtien2k3/search/service/ProductSyncDataServiceTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ search-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ search-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\search-service\target\search-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ search-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\search-service\target\search-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\search-service\target\search-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- jacoco:0.8.11:report (report) @ search-service ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ search-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\search-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\search-service\0.0.1-SNAPSHOT\search-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\search-service\target\search-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\search-service\0.0.1-SNAPSHOT\search-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -------------------< com.hoangtien2k3:user-service >--------------------
+[INFO] Building user-service 0.0.1-SNAPSHOT                             [10/16]
+[INFO]   from user-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ user-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\user-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ user-service ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ user-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 54 source files with javac [debug release 17] to target\classes
+[WARNING] /C:/Workspace/E-commerce-microservices-kubernetes-main/user-service/src/main/java/com/hoangtien2k3/userservice/model/entity/User.java:[72,23] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/user-service/src/main/java/com/hoangtien2k3/userservice/security/jwt/JwtProvider.java: Some input files use or override a deprecated API.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/user-service/src/main/java/com/hoangtien2k3/userservice/security/jwt/JwtProvider.java: Recompile with -Xlint:deprecation for details.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/user-service/src/main/java/com/hoangtien2k3/userservice/security/validate/AuthorityTokenUtil.java: C:\Workspace\E-commerce-microservices-kubernetes-main\user-service\src\main\java\com\hoangtien2k3\userservice\security\validate\AuthorityTokenUtil.java uses unchecked or unsafe operations.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/user-service/src/main/java/com/hoangtien2k3/userservice/security/validate/AuthorityTokenUtil.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ user-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\user-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ user-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ user-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ user-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\user-service\target\user-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ user-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\user-service\target\user-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\user-service\target\user-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ user-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\user-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\user-service\0.0.1-SNAPSHOT\user-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\user-service\target\user-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\user-service\0.0.1-SNAPSHOT\user-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------------< com.hoangtien2k3:api-gateway >--------------------
+[INFO] Building api-gateway 0.0.1-SNAPSHOT                              [11/16]
+[INFO]   from api-gateway\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ api-gateway ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\api-gateway\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ api-gateway ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ api-gateway ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 1 source file with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ api-gateway ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\api-gateway\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ api-gateway ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ api-gateway ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ api-gateway ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\api-gateway\target\api-gateway-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ api-gateway ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\api-gateway\target\api-gateway-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\api-gateway\target\api-gateway-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ api-gateway ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\api-gateway\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\api-gateway\0.0.1-SNAPSHOT\api-gateway-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\api-gateway\target\api-gateway-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\api-gateway\0.0.1-SNAPSHOT\api-gateway-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -----------------< com.hoangtien2k3:discovery-service >-----------------
+[INFO] Building discovery-server 0.0.1-SNAPSHOT                         [12/16]
+[INFO]   from discovery-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ discovery-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\discovery-service\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ discovery-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ discovery-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 1 source file with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ discovery-service ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\discovery-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ discovery-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ discovery-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ discovery-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\discovery-service\target\discovery-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ discovery-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\discovery-service\target\discovery-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\discovery-service\target\discovery-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ discovery-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\discovery-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\discovery-service\0.0.1-SNAPSHOT\discovery-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\discovery-service\target\discovery-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\discovery-service\0.0.1-SNAPSHOT\discovery-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -------------------< com.hoangtien2k3:proxy-client >--------------------
+[INFO] Building proxy-client 0.0.1-SNAPSHOT                             [13/16]
+[INFO]   from proxy-client\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ proxy-client ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\proxy-client\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ proxy-client ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ proxy-client ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 78 source files with javac [debug release 17] to target\classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/proxy-client/src/main/java/com/hoangtien2k3/proxyclient/jwt/util/impl/JwtUtilImpl.java: C:\Workspace\E-commerce-microservices-kubernetes-main\proxy-client\src\main\java\com\hoangtien2k3\proxyclient\jwt\util\impl\JwtUtilImpl.java uses or overrides a deprecated API.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/proxy-client/src/main/java/com/hoangtien2k3/proxyclient/jwt/util/impl/JwtUtilImpl.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ proxy-client ---
+[INFO] skip non existing resourceDirectory C:\Workspace\E-commerce-microservices-kubernetes-main\proxy-client\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ proxy-client ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ proxy-client ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ proxy-client ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\proxy-client\target\proxy-client-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ proxy-client ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\proxy-client\target\proxy-client-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\proxy-client\target\proxy-client-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ proxy-client ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\proxy-client\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\proxy-client\0.0.1-SNAPSHOT\proxy-client-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\proxy-client\target\proxy-client-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\proxy-client\0.0.1-SNAPSHOT\proxy-client-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] -----------------< com.hoangtien2k3:promotion-service >-----------------
+[INFO] Building promotion-service 0.0.1-SNAPSHOT                        [14/16]
+[INFO]   from promotion-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ promotion-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\target
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default-prepare-agent) @ promotion-service ---
+[INFO] argLine set to -javaagent:C:\\Users\\harsh\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Workspace\\E-commerce-microservices-kubernetes-main\\promotion-service\\target\\jacoco.exec,excludes=com/hoangtien2k3/**/*Application.class
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ promotion-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ promotion-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 40 source files with javac [debug release 17] to target\classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/promotion-service/src/main/java/com/hoangtien2k3/promotion/viewmodel/PromotionPostVm.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/promotion-service/src/main/java/com/hoangtien2k3/promotion/viewmodel/PromotionPostVm.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ promotion-service ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ promotion-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 5 source files with javac [debug release 17] to target\test-classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/promotion-service/src/test/java/com/hoangtien2k3/promotion/service/ProductServiceTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/promotion-service/src/test/java/com/hoangtien2k3/promotion/service/ProductServiceTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ promotion-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ promotion-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\target\promotion-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ promotion-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\target\promotion-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\target\promotion-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- jacoco:0.8.11:report (report) @ promotion-service ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ promotion-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\promotion-service\0.0.1-SNAPSHOT\promotion-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\target\promotion-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\promotion-service\0.0.1-SNAPSHOT\promotion-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.hoangtien2k3:rating-service >-------------------
+[INFO] Building rating-service 0.0.1-SNAPSHOT                           [15/16]
+[INFO]   from rating-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ rating-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\target
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default-prepare-agent) @ rating-service ---
+[INFO] argLine set to -javaagent:C:\\Users\\harsh\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Workspace\\E-commerce-microservices-kubernetes-main\\rating-service\\target\\jacoco.exec,excludes=com/hoangtien2k3/**/*Application.class
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ rating-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ rating-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 31 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ rating-service ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ rating-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 5 source files with javac [debug release 17] to target\test-classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/OrderServiceTest.java: C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\src\test\java\com\hoangtien2k3\rating\service\OrderServiceTest.java uses unchecked or unsafe operations.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/OrderServiceTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ rating-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ rating-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\target\rating-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ rating-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\target\rating-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\target\rating-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- jacoco:0.8.11:report (report) @ rating-service ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ rating-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\rating-service\0.0.1-SNAPSHOT\rating-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\target\rating-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\rating-service\0.0.1-SNAPSHOT\rating-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --------------------< com.hoangtien2k3:tax-service >--------------------
+[INFO] Building tax-service 0.0.1-SNAPSHOT                              [16/16]
+[INFO]   from tax-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ tax-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\tax-service\target
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default-prepare-agent) @ tax-service ---
+[INFO] argLine set to -javaagent:C:\\Users\\harsh\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Workspace\\E-commerce-microservices-kubernetes-main\\tax-service\\target\\jacoco.exec,excludes=com/hoangtien2k3/**/*Application.class
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ tax-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 5 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ tax-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 37 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ tax-service ---
+[INFO] Copying 4 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ tax-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ tax-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ tax-service ---
+[INFO] Building jar: C:\Workspace\E-commerce-microservices-kubernetes-main\tax-service\target\tax-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ tax-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\tax-service\target\tax-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\tax-service\target\tax-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- jacoco:0.8.11:report (report) @ tax-service ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ tax-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\tax-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\tax-service\0.0.1-SNAPSHOT\tax-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\tax-service\target\tax-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\tax-service\0.0.1-SNAPSHOT\tax-service-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] ecommerce-microservices 1.0-SNAPSHOT ............... SUCCESS [  0.393 s]
+[INFO] shipping-service 0.0.1-SNAPSHOT .................... SUCCESS [ 17.194 s]
+[INFO] notification-service 0.0.1-SNAPSHOT ................ SUCCESS [ 14.710 s]
+[INFO] order-service 0.0.1-SNAPSHOT ....................... SUCCESS [ 12.859 s]
+[INFO] payment-service 0.0.1-SNAPSHOT ..................... SUCCESS [ 17.610 s]
+[INFO] product-service 0.0.1-SNAPSHOT ..................... SUCCESS [ 19.962 s]
+[INFO] inventory-server 0.0.1-SNAPSHOT .................... SUCCESS [ 19.294 s]
+[INFO] favourite-service 0.0.1-SNAPSHOT ................... SUCCESS [ 15.095 s]
+[INFO] search 0.0.1-SNAPSHOT .............................. SUCCESS [ 14.924 s]
+[INFO] user-service 0.0.1-SNAPSHOT ........................ SUCCESS [ 16.530 s]
+[INFO] api-gateway 0.0.1-SNAPSHOT ......................... SUCCESS [ 11.741 s]
+[INFO] discovery-server 0.0.1-SNAPSHOT .................... SUCCESS [ 12.827 s]
+[INFO] proxy-client 0.0.1-SNAPSHOT ........................ SUCCESS [ 15.145 s]
+[INFO] promotion-service 0.0.1-SNAPSHOT ................... SUCCESS [  9.204 s]
+[INFO] rating-service 0.0.1-SNAPSHOT ...................... SUCCESS [  7.754 s]
+[INFO] tax-service 0.0.1-SNAPSHOT ......................... SUCCESS [ 13.070 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:39 min
+[INFO] Finished at: 2026-01-01T20:41:28+05:30
+[INFO] ------------------------------------------------------------------------

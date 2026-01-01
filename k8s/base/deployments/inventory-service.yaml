@@ -1,4 +1,3 @@
-# k8s/base/deployments/inventory-service.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,7 +23,10 @@ spec:
             - containerPort: 8082
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: "prod"
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: spring.profiles.active
             - name: EUREKA_URI
               valueFrom:
                 configMapKeyRef:
@@ -34,7 +36,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: app-config
-                  key: spring.datasource.url
+                  key: inventory.datasource.url
             - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
                 secretKeyRef:
@@ -45,11 +47,8 @@ spec:
                 secretKeyRef:
                   name: database-secrets
                   key: mysql-password
-            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
-              valueFrom:
-                configMapKeyRef:
-                  name: app-config
-                  key: spring.kafka.bootstrap-servers
+            - name: LOGGING_FILE_NAME
+              value: ""
           resources:
             requests:
               memory: "256Mi"

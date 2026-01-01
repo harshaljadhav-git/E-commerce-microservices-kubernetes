@@ -1,4 +1,3 @@
-# k8s/base/deployments/order-service.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,7 +23,10 @@ spec:
             - containerPort: 8084
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: "prod"
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: spring.profiles.active
             - name: EUREKA_URI
               valueFrom:
                 configMapKeyRef:
@@ -34,7 +36,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: app-config
-                  key: spring.datasource.url # Update to order DB in real scenerio
+                  key: order.datasource.url
             - name: SPRING_DATASOURCE_USERNAME
               valueFrom:
                 secretKeyRef:
@@ -50,6 +52,23 @@ spec:
                 configMapKeyRef:
                   name: app-config
                   key: spring.kafka.bootstrap-servers
+            - name: LOGGING_FILE_NAME
+              value: ""
+            - name: ECOMMERCE_SERVICES_PRODUCT
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: ecommerce.services.product
+            - name: ECOMMERCE_SERVICES_INVENTORY
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: ecommerce.services.inventory
+            - name: ECOMMERCE_SERVICES_PAYMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: ecommerce.services.payment
           resources:
             requests:
               memory: "256Mi"

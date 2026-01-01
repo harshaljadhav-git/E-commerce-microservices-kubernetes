@@ -1,11 +1,18 @@
 package com.hoangtien2k3.rating.viewmodel;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
 @Builder
-public record RatingPostVm(
-        String content, int star, Long productId, String productName
-) {
-
+@AllArgsConstructor
+@NoArgsConstructor
+public class RatingPostVm {
+    private String content;
+    private int star;
+    private Long productId;
+    private String productName;
 }
 

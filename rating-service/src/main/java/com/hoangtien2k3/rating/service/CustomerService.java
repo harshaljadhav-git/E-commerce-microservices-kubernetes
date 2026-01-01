@@ -25,7 +25,7 @@ public class CustomerService extends AbstractCircuitBreakFallbackHandler {
         final String jwt = ((Jwt) SecurityContextHolder.getContext().getAuthentication().getPrincipal())
                 .getTokenValue();
         final URI url = UriComponentsBuilder
-                .fromHttpUrl(serviceUrlConfig.customer())
+                .fromHttpUrl(serviceUrlConfig.getCustomer())
                 .path("/storefront/customer/profile")
                 .buildAndExpand()
                 .toUri();

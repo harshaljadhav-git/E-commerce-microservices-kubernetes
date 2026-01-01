@@ -45,9 +45,9 @@ class OrderServiceTest {
     @Test
     void testCheckOrderExistsByProductAndUserWithStatus_whenNormalCase_returnOrderExistsByProductAndUserGetVm() {
 
-        when(serviceUrlConfig.order()).thenReturn(ORDER_URL);
+        when(serviceUrlConfig.getOrder()).thenReturn(ORDER_URL);
         URI url = UriComponentsBuilder
-            .fromHttpUrl(serviceUrlConfig.order())
+            .fromHttpUrl(serviceUrlConfig.getOrder())
             .path("/storefront/orders/completed")
             .queryParam("productId", "1")
             .buildAndExpand()

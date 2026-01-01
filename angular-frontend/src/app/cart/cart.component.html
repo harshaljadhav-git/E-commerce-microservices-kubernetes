@@ -2,13 +2,14 @@
   <h2>Your Cart</h2>
   <div *ngIf="cartItems.length > 0; else emptyCart">
     <div *ngFor="let item of cartItems" class="cart-item">
-      <img [src]="item.image" alt="{{ item.name }}">
+      <img [src]="item.image" alt="{{ item.productTitle }}">
       <div class="item-details">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.price | currency }}</p>
+        <h3>{{ item.productTitle }}</h3>
+        <p>{{ item.priceUnit | currency }}</p>
         <div class="quantity-controls">
           <label for="quantity-{{ item.id }}">Quantity:</label>
-          <input id="quantity-{{ item.id }}" type="number" [value]="item.quantity" (change)="updateQuantity(item.id, $event)">
+          <input id="quantity-{{ item.id }}" type="number" [value]="item.quantity"
+            (change)="updateQuantity(item.id, $event)">
           <button (click)="removeItem(item.id)">Remove</button>
         </div>
       </div>

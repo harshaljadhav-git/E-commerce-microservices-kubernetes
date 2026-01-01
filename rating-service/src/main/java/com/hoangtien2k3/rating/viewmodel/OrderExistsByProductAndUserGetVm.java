@@ -1,4 +1,12 @@
 package com.hoangtien2k3.rating.viewmodel;
 
-public record OrderExistsByProductAndUserGetVm(boolean isPresent) {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class OrderExistsByProductAndUserGetVm {
+    private boolean isPresent;
 }

@@ -5,10 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { ProductService, Product } from '../../core/services/product.service';
 
 @Component({
-    selector: 'app-product-list',
-    standalone: true,
-    imports: [CommonModule, RouterModule, FormsModule],
-    template: `
+  selector: 'app-product-list',
+  standalone: true,
+  imports: [CommonModule, RouterModule, FormsModule],
+  template: `
     <div class="space-y-6 animate-float">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
@@ -48,7 +48,7 @@ import { ProductService, Product } from '../../core/services/product.service';
       <div *ngIf="viewMode === 'grid'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div *ngFor="let product of products" class="glass-card group hover:bg-white/5 transition-all cursor-pointer relative overflow-hidden">
           <div class="aspect-square bg-black/30 rounded-lg mb-4 overflow-hidden relative">
-            <img [src]="product.imageUrl || 'assets/placeholder.png'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="{{product.name}}">
+            <img [src]="product.imageUrl || 'assets/placeholder.png'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="{{product.productTitle}}">
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-4 gap-2">
                <button class="bg-white/20 hover:bg-white/40 p-2 rounded-full backdrop-blur-sm transition-colors text-white">
                  <i class="fas fa-edit"></i>
@@ -59,8 +59,8 @@ import { ProductService, Product } from '../../core/services/product.service';
             </div>
           </div>
           <div class="flex justify-between items-start mb-2">
-             <h3 class="font-bold text-lg text-white truncate pr-2">{{product.name}}</h3>
-             <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded font-mono">{{product.price | currency}}</span>
+             <h3 class="font-bold text-lg text-white truncate pr-2">{{product.productTitle}}</h3>
+             <span class="bg-primary/20 text-primary text-xs px-2 py-1 rounded font-mono">{{product.priceUnit | currency}}</span>
           </div>
           <div class="flex justify-between items-center text-sm text-gray-400">
             <span>SKU: {{product.sku}}</span>
@@ -90,11 +90,11 @@ import { ProductService, Product } from '../../core/services/product.service';
                 <div class="w-10 h-10 rounded bg-black/30 overflow-hidden">
                   <img [src]="product.imageUrl || 'assets/placeholder.png'" class="w-full h-full object-cover">
                 </div>
-                <span class="font-medium text-white">{{product.name}}</span>
+                <span class="font-medium text-white">{{product.productTitle}}</span>
               </td>
               <td class="px-6 py-4 text-gray-400 font-mono text-sm">{{product.sku}}</td>
               <td class="px-6 py-4 text-gray-400">Category</td>
-              <td class="px-6 py-4 text-white font-mono">{{product.price | currency}}</td>
+              <td class="px-6 py-4 text-white font-mono">{{product.priceUnit | currency}}</td>
               <td class="px-6 py-4">
                 <span class="px-2 py-1 rounded text-xs" [class.bg-accent_20]="product.quantity > 10" [class.text-accent]="product.quantity > 10" [class.bg-danger_20]="product.quantity <= 10" [class.text-danger]="product.quantity <= 10">
                   {{product.quantity}} units
@@ -114,28 +114,28 @@ import { ProductService, Product } from '../../core/services/product.service';
   `
 })
 export class ProductListComponent implements OnInit {
-    private productService = inject(ProductService);
+  private productService = inject(ProductService);
 
-    products: Product[] = [];
-    viewMode: 'grid' | 'list' = 'grid';
-    searchQuery = '';
+  products: Product[] = [];
+  viewMode: 'grid' | 'list' = 'grid';
+  searchQuery = '';
 
-    ngOnInit() {
-        this.loadProducts();
-    }
+  ngOnInit() {
+    this.loadProducts();
+  }
 
-    loadProducts() {
-        // Mock data for initial rendering if API is not ready
-        this.productService.getProducts(0, 50, this.searchQuery).subscribe({
-            next: (data) => this.products = data.content || data, // Handle Page or List response
-            error: () => {
-                // Fallback mock data
-                this.products = [
-                    { id: 1, name: 'Neon Cyber Deck', sku: 'CP-2077', price: 299.99, quantity: 45, description: 'High performance deck', imageUrl: '' },
-                    { id: 2, name: 'Quantum Processor', sku: 'QP-9000', price: 899.50, quantity: 5, description: 'Next gen computing', imageUrl: '' },
-                    { id: 3, name: 'Holographic Display', sku: 'HD-4K', price: 450.00, quantity: 120, description: '3D projection unit', imageUrl: '' },
-                ];
-            }
-        });
-    }
+  loadProducts() {
+    // Mock data for initial rendering if API is not ready
+    this.productService.getProducts(0, 50, this.searchQuery).subscribe({
+      next: (data) => this.products = data.content || data, // Handle Page or List response
+      error: () => {
+        // Fallback mock data
+        this.products = [
+          { id: 1, productTitle: 'Neon Cyber Deck', sku: 'CP-2077', priceUnit: 299.99, quantity: 45, description: 'High performance deck', imageUrl: '' },
+          { id: 2, productTitle: 'Quantum Processor', sku: 'QP-9000', priceUnit: 899.50, quantity: 5, description: 'Next gen computing', imageUrl: '' },
+          { id: 3, productTitle: 'Holographic Display', sku: 'HD-4K', priceUnit: 450.00, quantity: 120, description: '3D projection unit', imageUrl: '' },
+        ];
+      }
+    });
+  }
 }

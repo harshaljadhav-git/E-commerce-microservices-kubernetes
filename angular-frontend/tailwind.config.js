@@ -6,12 +6,12 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: '#3B82F6',      /* Electric Blue */
-                secondary: '#8B5CF6',    /* Cyber Purple */
-                accent: '#14B8A6',       /* Neon Teal */
-                danger: '#FF6B6B',       /* Coral */
-                dark: '#0F172A',         /* Deep Navy */
-                glass: 'rgba(255,255,255,0.1)',
+                primary: '#2563EB',      /* Professional Blue */
+                secondary: '#64748B',    /* Slate Gray */
+                accent: '#0EA5E9',       /* Sky Blue */
+                danger: '#EF4444',       /* Red */
+                dark: '#F8FAFC',         /* Light Background (White/Slate-50) */
+                glass: 'rgba(255, 255, 255, 0.8)',
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

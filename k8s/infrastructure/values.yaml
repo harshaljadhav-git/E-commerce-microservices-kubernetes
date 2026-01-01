@@ -1,12 +1,14 @@
+# k8s/infrastructure/values.yaml
 # Global settings
 redis:
   enabled: true
   architecture: standalone
   auth:
-    enabled: false # Dev mode only
+    enabled: false # Dev mode only, enable in prod
   master:
     persistence:
-      enabled: false
+      enabled: true
+      size: 1Gi
     resources:
       requests:
         cpu: 100m
@@ -21,7 +23,8 @@ kafka:
   zookeeper:
     replicaCount: 1
     persistence:
-      enabled: false
+      enabled: true
+      size: 2Gi
     resources:
       requests:
         cpu: 100m
@@ -30,7 +33,8 @@ kafka:
         cpu: 250m
         memory: 512Mi
   persistence:
-    enabled: false
+    enabled: true
+    size: 5Gi
   resources:
     requests:
       cpu: 250m
@@ -38,9 +42,10 @@ kafka:
     limits:
       cpu: 1000m
       memory: 1Gi
-  # Simplified listener config for internal access
   listeners:
     client:
+      protocol: PLAINTEXT
+    controller:
       protocol: PLAINTEXT
     interbroker:
       protocol: PLAINTEXT
@@ -53,9 +58,10 @@ mongodb:
     rootPassword: "password"
     usernames: ["admin"]
     passwords: ["password"]
-    databases: ["ecommerce"]
+    databases: ["notificationservice", "promotionservice"]
   persistence:
-    enabled: false
+    enabled: true
+    size: 2Gi
   resources:
     requests:
       cpu: 200m
@@ -69,7 +75,8 @@ opensearch:
   replicas: 1
   singleNode: true
   persistence:
-    enabled: false
+    enabled: true
+    size: 5Gi
   resources:
     requests:
       cpu: 500m
@@ -77,8 +84,6 @@ opensearch:
     limits:
       cpu: 1000m
       memory: 2Gi
-  # Disable security plugin for simple dev setup if desired, 
-  # but standard OpenSearch usually needs HTTPS. Keeping defaults often best.
   config:
     opensearch.yml:
-      plugins.security.disabled: true # Dev mode customization
+      plugins.security.disabled: true # Dev mode, enable in prod

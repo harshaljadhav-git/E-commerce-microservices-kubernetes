@@ -86,9 +86,9 @@ class RatingServiceTest {
         int pageSize = 10;
 
         RatingListVm actualResponse = ratingService.getRatingListByProductId(1L, pageNo, pageSize);
-        assertEquals(totalPage, actualResponse.totalPages());
-        assertEquals(2, actualResponse.totalElements());
-        assertEquals(2, actualResponse.ratingList().size());
+        assertEquals(totalPage, actualResponse.getTotalPages());
+        assertEquals(2, actualResponse.getTotalElements());
+        assertEquals(2, actualResponse.getRatingList().size());
     }
 
     @Test
@@ -97,9 +97,9 @@ class RatingServiceTest {
         int pageSize = 10;
 
         RatingListVm actualResponse = ratingService.getRatingListByProductId(0L, pageNo, pageSize);
-        assertEquals(0, actualResponse.ratingList().size());
-        assertEquals(0, actualResponse.totalPages());
-        assertEquals(0, actualResponse.totalElements());
+        assertEquals(0, actualResponse.getRatingList().size());
+        assertEquals(0, actualResponse.getTotalPages());
+        assertEquals(0, actualResponse.getTotalElements());
     }
 
     @Test
@@ -115,12 +115,12 @@ class RatingServiceTest {
         int pageNo = 0;
         int pageSize = 10;
         RatingListVm actualResponse = ratingService.getRatingListWithFilter(proName, cusName, message, createdFrom, createdTo, pageNo, pageSize);
-        assertEquals(totalPage, actualResponse.totalPages());
-        assertEquals(1, actualResponse.totalElements());
-        assertEquals(proName, actualResponse.ratingList().get(0).productName());
-        assertEquals(message, actualResponse.ratingList().get(0).content());
-        assertEquals(firstName, actualResponse.ratingList().get(0).firstName());
-        assertEquals(lastName, actualResponse.ratingList().get(0).lastName());
+        assertEquals(totalPage, actualResponse.getTotalPages());
+        assertEquals(1, actualResponse.getTotalElements());
+        assertEquals(proName, actualResponse.getRatingList().get(0).getProductName());
+        assertEquals(message, actualResponse.getRatingList().get(0).getContent());
+        assertEquals(firstName, actualResponse.getRatingList().get(0).getFirstName());
+        assertEquals(lastName, actualResponse.getRatingList().get(0).getLastName());
     }
 
     @Test
@@ -137,9 +137,9 @@ class RatingServiceTest {
 
         RatingPostVm ratingPostVm = RatingPostVm.builder().content("comment 4").productName("product3").star(4).productId(3L).build();
         RatingVm ratingVm = ratingService.createRating(ratingPostVm);
-        assertEquals(ratingPostVm.productName(), ratingVm.productName());
-        assertEquals(ratingPostVm.content(), ratingVm.content());
-        assertEquals(ratingPostVm.star(), ratingVm.star());
+        assertEquals(ratingPostVm.getProductName(), ratingVm.getProductName());
+        assertEquals(ratingPostVm.getContent(), ratingVm.getContent());
+        assertEquals(ratingPostVm.getStar(), ratingVm.getStar());
     }
 
     @Test

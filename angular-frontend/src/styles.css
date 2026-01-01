@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --primary: #3B82F6;
-  --secondary: #8B5CF6;
-  --accent: #14B8A6;
-  --danger: #FF6B6B;
-  --dark: #0F172A;
-  --glass: rgba(255, 255, 255, 0.1);
-  --text-main: #F8FAFC;
-  --text-muted: #94A3B8;
+  --primary: #2563EB;
+  --secondary: #64748B;
+  --accent: #0EA5E9;
+  --danger: #EF4444;
+  --dark: #F8FAFC;
+  --glass: rgba(255, 255, 255, 0.8);
+  --text-main: #1E293B;
+  --text-muted: #64748B;
 }
 
 body {
@@ -22,20 +22,21 @@ body {
 
 /* Antigravity Utilities */
 .glass-effect {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .glass-card {
   @apply glass-effect rounded-2xl p-6 transition-all duration-300;
+  background: white;
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.08);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
 }
 
 /* Animations */

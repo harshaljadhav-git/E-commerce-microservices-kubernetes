@@ -76,12 +76,12 @@ public class RatingService {
         String userId = AuthenticationUtils.extractUserId();
 
         if (!orderService.checkOrderExistsByProductAndUserWithStatus(
-                ratingPostVm.productId()
+                ratingPostVm.getProductId()
         ).isPresent()) {
             throw new AccessDeniedException(Constants.ErrorCode.ACCESS_DENIED);
         }
 
-        if (ratingRepository.existsByCreatedByAndProductId(userId, ratingPostVm.productId())) {
+        if (ratingRepository.existsByCreatedByAndProductId(userId, ratingPostVm.getProductId())) {
             throw new ResourceExistedException(Constants.ErrorCode.RESOURCE_ALREADY_EXISTED);
         }
 
@@ -91,13 +91,13 @@ public class RatingService {
         }
 
         Rating rating = new Rating();
-        rating.setRatingStar(ratingPostVm.star());
-        rating.setContent(ratingPostVm.content());
-        rating.setProductId(ratingPostVm.productId());
-        rating.setProductName(ratingPostVm.productName());
+        rating.setRatingStar(ratingPostVm.getStar());
+        rating.setContent(ratingPostVm.getContent());
+        rating.setProductId(ratingPostVm.getProductId());
+        rating.setProductName(ratingPostVm.getProductName());
 
-        rating.setLastName(customerVm.lastName());
-        rating.setFirstName(customerVm.firstName());
+        rating.setLastName(customerVm.getLastName());
+        rating.setFirstName(customerVm.getFirstName());
 
         Rating savedRating = ratingRepository.save(rating);
         return RatingVm.fromModel(savedRating);

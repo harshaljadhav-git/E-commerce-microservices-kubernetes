@@ -5,7 +5,21 @@ WORKDIR /app
 
 # Copy parent pom first for better caching
 COPY pom.xml .
+COPY shipping-service/pom.xml ./shipping-service/
+COPY notification-service/pom.xml ./notification-service/
+COPY order-service/pom.xml ./order-service/
+COPY payment-service/pom.xml ./payment-service/
 COPY product-service/pom.xml ./product-service/
+COPY inventory-service/pom.xml ./inventory-service/
+COPY favourite-service/pom.xml ./favourite-service/
+COPY search-service/pom.xml ./search-service/
+COPY user-service/pom.xml ./user-service/
+COPY api-gateway/pom.xml ./api-gateway/
+COPY discovery-service/pom.xml ./discovery-service/
+COPY proxy-client/pom.xml ./proxy-client/
+COPY promotion-service/pom.xml ./promotion-service/
+COPY rating-service/pom.xml ./rating-service/
+COPY tax-service/pom.xml ./tax-service/
 
 # Download dependencies (cached layer)
 RUN mvn dependency:go-offline -B -pl product-service -am

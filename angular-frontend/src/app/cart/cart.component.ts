@@ -5,8 +5,8 @@ import { CartService } from '../cart.service';
 
 interface CartItem {
   id: number;
-  name: string;
-  price: number;
+  productTitle: string;
+  priceUnit: number;
   quantity: number;
   image: string;
 }
@@ -28,21 +28,21 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     // In a real application, you would get the cart ID from the user's session.
     // For now, we'll use a hardcoded cart ID.
-    const cartId = 1; 
+    const cartId = 1;
     this.cartService.getCart(cartId).subscribe((cart: any) => {
       this.cartItems = cart.orderDtos.map((item: any) => ({
         id: item.productId,
-        name: item.productName, // Assuming the backend provides productName
-        price: item.price, // Assuming the backend provides price
+        productTitle: item.productName || item.productTitle, // Handle potential backend mismatch
+        priceUnit: item.price || item.priceUnit || item.orderFee, // Handle potential backend mismatch, fallback to orderFee if it's an order
         quantity: item.quantity,
-        image: item.imageUrl // Assuming the backend provides imageUrl
+        image: item.imageUrl
       }));
       this.calculateTotal();
     });
   }
 
   calculateTotal(): void {
-    this.total = this.cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    this.total = this.cartItems.reduce((acc, item) => acc + (item.priceUnit * item.quantity), 0);
   }
 
   updateQuantity(itemId: number, event: Event): void {

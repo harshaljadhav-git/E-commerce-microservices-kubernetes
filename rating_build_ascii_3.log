@@ -1,0 +1,26 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.hoangtien2k3:rating-service >-------------------
+[INFO] Building rating-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ rating-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\target
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default-prepare-agent) @ rating-service ---
+[INFO] argLine set to -javaagent:C:\\Users\\harsh\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Workspace\\E-commerce-microservices-kubernetes-main\\rating-service\\target\\jacoco.exec,excludes=com/hoangtien2k3/**/*Application.class
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ rating-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ rating-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 31 source files with javac [debug release 17] to target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.055 s
+[INFO] Finished at: 2026-01-01T20:27:25+05:30
+[INFO] ------------------------------------------------------------------------

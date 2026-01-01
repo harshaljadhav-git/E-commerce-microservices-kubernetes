@@ -3,11 +3,28 @@ package com.hoangtien2k3.rating.viewmodel;
 
 import com.hoangtien2k3.rating.model.Rating;
 import java.time.ZonedDateTime;
+import com.hoangtien2k3.rating.model.Rating;
+import java.time.ZonedDateTime;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
 @Builder
-public record RatingVm(Long id, String content, int star, Long productId, String productName, String createdBy,
-                       String lastName, String firstName, ZonedDateTime createdOn) {
+@AllArgsConstructor
+@NoArgsConstructor
+public class RatingVm {
+    private Long id;
+    private String content;
+    private int star;
+    private Long productId;
+    private String productName;
+    private String createdBy;
+    private String lastName;
+    private String firstName;
+    private ZonedDateTime createdOn;
+
     public static RatingVm fromModel(Rating rating) {
         return RatingVm.builder()
                 .id(rating.getId())

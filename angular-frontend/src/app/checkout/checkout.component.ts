@@ -20,9 +20,9 @@ export class CheckoutComponent implements AfterViewInit, OnInit {
 
   ngOnInit(): void {
     // In a real application, you would get the cart ID from the user's session.
-    const cartId = 1; 
+    const cartId = 1;
     this.cartService.getCart(cartId).subscribe((cart: any) => {
-      const total = cart.orderDtos.reduce((acc: number, item: any) => acc + (item.price * item.quantity), 0);
+      const total = cart.orderDtos.reduce((acc: number, item: any) => acc + (item.orderFee * item.quantity), 0);
       this.total = total.toFixed(2);
       this.renderPayPalButton();
     });
@@ -36,7 +36,7 @@ export class CheckoutComponent implements AfterViewInit, OnInit {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script');
       // Replace with your client ID. This is a placeholder.
-      script.src = 'https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXxBKPiXRj_xomcg4Sj_2cf_g_a_p_3y1a_2j_2k_2l_2m'; 
+      script.src = 'https://www.paypal.com/sdk/js?client-id=AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXxBKPiXRj_xomcg4Sj_2cf_g_a_p_3y1a_2j_2k_2l_2m';
       script.onload = () => resolve();
       script.onerror = () => reject();
       document.body.appendChild(script);

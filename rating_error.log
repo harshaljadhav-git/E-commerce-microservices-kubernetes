@@ -1,0 +1,200 @@
+[INFO] 
+[INFO] --- spring-boot:3.2.4:repackage (repackage) @ promotion-service ---
+[INFO] Replacing main artifact C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\target\promotion-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\target\promotion-service-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- jacoco:0.8.11:report (report) @ promotion-service ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ promotion-service ---
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\pom.xml to C:\Users\harsh\.m2\repository\com\hoangtien2k3\promotion-service\0.0.1-SNAPSHOT\promotion-service-0.0.1-SNAPSHOT.pom
+[INFO] Installing C:\Workspace\E-commerce-microservices-kubernetes-main\promotion-service\target\promotion-service-0.0.1-SNAPSHOT.jar to C:\Users\harsh\.m2\repository\com\hoangtien2k3\promotion-service\0.0.1-SNAPSHOT\promotion-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] ------------------< com.hoangtien2k3:rating-service >-------------------
+[INFO] Building rating-service 0.0.1-SNAPSHOT                           [15/16]
+[INFO]   from rating-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ rating-service ---
+[INFO] Deleting C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\target
+[INFO] 
+[INFO] --- jacoco:0.8.11:prepare-agent (default-prepare-agent) @ rating-service ---
+[INFO] argLine set to -javaagent:C:\\Users\\harsh\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.11\\org.jacoco.agent-0.8.11-runtime.jar=destfile=C:\\Workspace\\E-commerce-microservices-kubernetes-main\\rating-service\\target\\jacoco.exec,excludes=com/hoangtien2k3/**/*Application.class
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ rating-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 6 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ rating-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 31 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ rating-service ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ rating-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 5 source files with javac [debug release 17] to target\test-classes
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/OrderServiceTest.java: C:\Workspace\E-commerce-microservices-kubernetes-main\rating-service\src\test\java\com\hoangtien2k3\rating\service\OrderServiceTest.java uses unchecked or unsafe operations.
+[INFO] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/OrderServiceTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[89,47] cannot find symbol
+  symbol:   method totalPages()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[90,39] cannot find symbol
+  symbol:   method totalElements()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[91,39] cannot find symbol
+  symbol:   method ratingList()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[100,39] cannot find symbol
+  symbol:   method ratingList()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[101,39] cannot find symbol
+  symbol:   method totalPages()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[102,39] cannot find symbol
+  symbol:   method totalElements()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[118,47] cannot find symbol
+  symbol:   method totalPages()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[119,39] cannot find symbol
+  symbol:   method totalElements()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[120,45] cannot find symbol
+  symbol:   method ratingList()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[121,45] cannot find symbol
+  symbol:   method ratingList()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[122,47] cannot find symbol
+  symbol:   method ratingList()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[123,46] cannot find symbol
+  symbol:   method ratingList()
+  location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[140,34] cannot find symbol
+  symbol:   method productName()
+  location: variable ratingPostVm of type com.hoangtien2k3.rating.viewmodel.RatingPostVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[140,58] cannot find symbol
+  symbol:   method productName()
+  location: variable ratingVm of type com.hoangtien2k3.rating.viewmodel.RatingVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[141,34] cannot find symbol
+  symbol:   method content()
+  location: variable ratingPostVm of type com.hoangtien2k3.rating.viewmodel.RatingPostVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[141,54] cannot find symbol
+  symbol:   method content()
+  location: variable ratingVm of type com.hoangtien2k3.rating.viewmodel.RatingVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[142,34] cannot find symbol
+  symbol:   method star()
+  location: variable ratingPostVm of type com.hoangtien2k3.rating.viewmodel.RatingPostVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[142,51] cannot find symbol
+  symbol:   method star()
+  location: variable ratingVm of type com.hoangtien2k3.rating.viewmodel.RatingVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/OrderServiceTest.java:[48,30] cannot find symbol
+  symbol:   method order()
+  location: variable serviceUrlConfig of type com.hoangtien2k3.rating.config.ServiceUrlConfig
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/OrderServiceTest.java:[50,42] cannot find symbol
+  symbol:   method order()
+  location: variable serviceUrlConfig of type com.hoangtien2k3.rating.config.ServiceUrlConfig
+[INFO] 20 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] ecommerce-microservices 1.0-SNAPSHOT ............... SUCCESS [  0.433 s]
+[INFO] shipping-service 0.0.1-SNAPSHOT .................... SUCCESS [ 16.833 s]
+[INFO] notification-service 0.0.1-SNAPSHOT ................ SUCCESS [ 10.516 s]
+[INFO] order-service 0.0.1-SNAPSHOT ....................... SUCCESS [  9.753 s]
+[INFO] payment-service 0.0.1-SNAPSHOT ..................... SUCCESS [  9.323 s]
+[INFO] product-service 0.0.1-SNAPSHOT ..................... SUCCESS [  9.718 s]
+[INFO] inventory-server 0.0.1-SNAPSHOT .................... SUCCESS [  9.465 s]
+[INFO] favourite-service 0.0.1-SNAPSHOT ................... SUCCESS [ 14.527 s]
+[INFO] search 0.0.1-SNAPSHOT .............................. SUCCESS [ 21.833 s]
+[INFO] user-service 0.0.1-SNAPSHOT ........................ SUCCESS [  9.006 s]
+[INFO] api-gateway 0.0.1-SNAPSHOT ......................... SUCCESS [  9.458 s]
+[INFO] discovery-server 0.0.1-SNAPSHOT .................... SUCCESS [ 19.673 s]
+[INFO] proxy-client 0.0.1-SNAPSHOT ........................ SUCCESS [ 23.064 s]
+[INFO] promotion-service 0.0.1-SNAPSHOT ................... SUCCESS [ 28.454 s]
+[INFO] rating-service 0.0.1-SNAPSHOT ...................... FAILURE [ 11.506 s]
+[INFO] tax-service 0.0.1-SNAPSHOT ......................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:24 min
+[INFO] Finished at: 2026-01-01T20:32:22+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:testCompile (default-testCompile) on project rating-service: Compilation failure: Compilation failure: 
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[89,47] cannot find symbol
+[ERROR]   symbol:   method totalPages()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[90,39] cannot find symbol
+[ERROR]   symbol:   method totalElements()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[91,39] cannot find symbol
+[ERROR]   symbol:   method ratingList()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[100,39] cannot find symbol
+[ERROR]   symbol:   method ratingList()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[101,39] cannot find symbol
+[ERROR]   symbol:   method totalPages()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[102,39] cannot find symbol
+[ERROR]   symbol:   method totalElements()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[118,47] cannot find symbol
+[ERROR]   symbol:   method totalPages()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[119,39] cannot find symbol
+[ERROR]   symbol:   method totalElements()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[120,45] cannot find symbol
+[ERROR]   symbol:   method ratingList()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[121,45] cannot find symbol
+[ERROR]   symbol:   method ratingList()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[122,47] cannot find symbol
+[ERROR]   symbol:   method ratingList()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[123,46] cannot find symbol
+[ERROR]   symbol:   method ratingList()
+[ERROR]   location: variable actualResponse of type com.hoangtien2k3.rating.viewmodel.RatingListVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[140,34] cannot find symbol
+[ERROR]   symbol:   method productName()
+[ERROR]   location: variable ratingPostVm of type com.hoangtien2k3.rating.viewmodel.RatingPostVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[140,58] cannot find symbol
+[ERROR]   symbol:   method productName()
+[ERROR]   location: variable ratingVm of type com.hoangtien2k3.rating.viewmodel.RatingVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[141,34] cannot find symbol
+[ERROR]   symbol:   method content()
+[ERROR]   location: variable ratingPostVm of type com.hoangtien2k3.rating.viewmodel.RatingPostVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[141,54] cannot find symbol
+[ERROR]   symbol:   method content()
+[ERROR]   location: variable ratingVm of type com.hoangtien2k3.rating.viewmodel.RatingVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[142,34] cannot find symbol
+[ERROR]   symbol:   method star()
+[ERROR]   location: variable ratingPostVm of type com.hoangtien2k3.rating.viewmodel.RatingPostVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/RatingServiceTest.java:[142,51] cannot find symbol
+[ERROR]   symbol:   method star()
+[ERROR]   location: variable ratingVm of type com.hoangtien2k3.rating.viewmodel.RatingVm
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/OrderServiceTest.java:[48,30] cannot find symbol
+[ERROR]   symbol:   method order()
+[ERROR]   location: variable serviceUrlConfig of type com.hoangtien2k3.rating.config.ServiceUrlConfig
+[ERROR] /C:/Workspace/E-commerce-microservices-kubernetes-main/rating-service/src/test/java/com/hoangtien2k3/rating/service/OrderServiceTest.java:[50,42] cannot find symbol
+[ERROR]   symbol:   method order()
+[ERROR]   location: variable serviceUrlConfig of type com.hoangtien2k3.rating.config.ServiceUrlConfig
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :rating-service

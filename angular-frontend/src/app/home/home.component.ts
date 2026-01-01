@@ -6,8 +6,8 @@ import { CartService } from '../cart.service';
 
 interface Product {
   id: number;
-  name: string;
-  price: number;
+  productTitle: string;
+  priceUnit: number;
   image: string;
 }
 
@@ -28,8 +28,8 @@ export class HomeComponent implements OnInit {
     this.http.get<any[]>('/api/products').pipe(
       map(products => products.map(product => ({
         id: product.productId,
-        name: product.productTitle,
-        price: product.priceUnit,
+        productTitle: product.productTitle,
+        priceUnit: product.priceUnit,
         image: product.imageUrl
       })))
     ).subscribe(products => {
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
       }]
     };
     this.cartService.addToCart(cart).subscribe(() => {
-      console.log(`Added ${product.name} to cart.`);
+      console.log(`Added ${product.productTitle} to cart.`);
     });
   }
 }

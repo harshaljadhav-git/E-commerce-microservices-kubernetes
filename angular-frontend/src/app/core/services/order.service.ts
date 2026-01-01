@@ -4,13 +4,14 @@ import { Observable } from 'rxjs';
 
 export interface Order {
     id?: number;
-    orderNumber: string;
-    skuCode: string;
-    price: number;
+    orderId?: string; // or number, backend uses Integer
+    productId: string; // or number, backend uses Integer
+    orderFee: number;
     quantity: number;
     email: string;
     orderDate?: string;
-    status: string;
+    orderDesc?: string;
+    status?: string;
 }
 
 import { environment } from '../../../environments/environment';

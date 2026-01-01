@@ -5,10 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { OrderService, Order } from '../../core/services/order.service';
 
 @Component({
-    selector: 'app-order-list',
-    standalone: true,
-    imports: [CommonModule, RouterModule, FormsModule],
-    template: `
+  selector: 'app-order-list',
+  standalone: true,
+  imports: [CommonModule, RouterModule, FormsModule],
+  template: `
     <div class="space-y-6 animate-float">
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
@@ -55,15 +55,15 @@ import { OrderService, Order } from '../../core/services/order.service';
           </thead>
           <tbody class="divide-y divide-white/10">
             <tr *ngFor="let order of orders" class="hover:bg-white/5 transition-colors group">
-              <td class="px-6 py-4 text-white font-mono">#{{order.orderNumber}}</td>
+              <td class="px-6 py-4 text-white font-mono">#{{order.orderId}}</td>
               <td class="px-6 py-4 text-gray-300">{{order.email || 'N/A'}}</td>
               <td class="px-6 py-4 text-gray-300">
                 <div class="flex flex-col">
-                    <span class="text-white">{{order.skuCode}}</span>
+                    <span class="text-white">{{order.productId}}</span>
                     <span class="text-xs text-gray-500">Qty: {{order.quantity}}</span>
                 </div>
               </td>
-              <td class="px-6 py-4 text-white font-mono">{{order.price * order.quantity | currency}}</td>
+              <td class="px-6 py-4 text-white font-mono">{{order.orderFee * order.quantity | currency}}</td>
               <td class="px-6 py-4">
                 <span class="px-2 py-1 rounded text-xs font-medium" 
                 [ngClass]="{
@@ -93,28 +93,28 @@ import { OrderService, Order } from '../../core/services/order.service';
   `
 })
 export class OrderListComponent implements OnInit {
-    private orderService = inject(OrderService);
+  private orderService = inject(OrderService);
 
-    orders: Order[] = [];
+  orders: Order[] = [];
 
-    ngOnInit() {
-        this.loadOrders();
-    }
+  ngOnInit() {
+    this.loadOrders();
+  }
 
-    loadOrders() {
-        this.orderService.getOrders().subscribe({
-            next: (data) => {
-                // Determine if data is wrapped in Page object or direct list
-                this.orders = Array.isArray(data) ? data : (data.content || []);
-            },
-            error: (err) => {
-                console.error('Failed to load orders', err);
-                // Mock data
-                this.orders = [
-                    { id: 1, orderNumber: 'ORD-7782-X', skuCode: 'CP-2077', price: 299.99, quantity: 1, email: 'user@example.com', status: 'PENDING', orderDate: new Date().toISOString() },
-                    { id: 2, orderNumber: 'ORD-9921-Y', skuCode: 'QP-9000', price: 899.50, quantity: 2, email: 'corp@tech.com', status: 'COMPLETED', orderDate: new Date(Date.now() - 86400000).toISOString() }
-                ];
-            }
-        });
-    }
+  loadOrders() {
+    this.orderService.getOrders().subscribe({
+      next: (data) => {
+        // Determine if data is wrapped in Page object or direct list
+        this.orders = Array.isArray(data) ? data : (data.content || []);
+      },
+      error: (err) => {
+        console.error('Failed to load orders', err);
+        // Mock data
+        this.orders = [
+          { id: 1, orderId: 'ORD-7782-X', productId: 'CP-2077', orderFee: 299.99, quantity: 1, email: 'user@example.com', status: 'PENDING', orderDate: new Date().toISOString() },
+          { id: 2, orderId: 'ORD-9921-Y', productId: 'QP-9000', orderFee: 899.50, quantity: 2, email: 'corp@tech.com', status: 'COMPLETED', orderDate: new Date(Date.now() - 86400000).toISOString() }
+        ];
+      }
+    });
+  }
 }

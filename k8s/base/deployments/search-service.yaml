@@ -1,4 +1,3 @@
-# k8s/base/deployments/search-service.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -21,32 +20,37 @@ spec:
           image: search-service:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8093 # Remapped port
+            - containerPort: 8093
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: "prod"
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: spring.profiles.active
             - name: EUREKA_URI
               valueFrom:
                 configMapKeyRef:
                   name: app-config
                   key: eureka.uri
-            - name: ELASTICSEARCH_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: app-config
-                  key: opensearch.uris # Spring Data Elasticsearch usually takes URI or split host/port. Using URI is safer if app supports it, else host.
-            - name: ELASTICSEARCH_URIS
+            - name: SPRING_ELASTICSEARCH_URIS
               valueFrom:
                 configMapKeyRef:
                   name: app-config
                   key: opensearch.uris
+            - name: LOGGING_FILE_NAME
+              value: ""
+            - name: ECOMMERCE_SERVICES_PRODUCT
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: ecommerce.services.product
           resources:
             requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
               memory: "512Mi"
               cpu: "500m"
-            limits:
-              memory: "1Gi"
-              cpu: "1000m"
           livenessProbe:
             httpGet:
               path: /actuator/health
