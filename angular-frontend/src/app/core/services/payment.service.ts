@@ -3,11 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Payment {
-    id?: number;
+    paymentId?: number;
+    isPayed?: boolean;
+    paymentStatus?: string;
     orderId: number;
-    amount: number;
-    paymentStatus: string;
-    transactionId: string;
+    userId: number;
+    // Optional nested DTOs if needed for display
+    orderDto?: any;
+    userDto?: any;
 }
 
 import { environment } from '../../../environments/environment';
@@ -21,5 +24,9 @@ export class PaymentService {
 
     getPayments(): Observable<any> {
         return this.http.get<any>(this.apiUrl);
+    }
+
+    createPayment(payment: Payment): Observable<Payment> {
+        return this.http.post<Payment>(this.apiUrl, payment);
     }
 }

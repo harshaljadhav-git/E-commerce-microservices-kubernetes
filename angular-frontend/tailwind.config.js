@@ -12,6 +12,8 @@ module.exports = {
                 danger: '#EF4444',       /* Red */
                 dark: '#F8FAFC',         /* Light Background (White/Slate-50) */
                 glass: 'rgba(255, 255, 255, 0.8)',
+                'text-main': '#000000',
+                'text-muted': '#374151',
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],

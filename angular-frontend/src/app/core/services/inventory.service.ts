@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 export interface InventoryItem {
     id?: number;
@@ -17,9 +17,20 @@ export class InventoryService {
     private http = inject(HttpClient);
     private apiUrl = `${environment.apiUrl}/inventory`; // Inventory Service
 
-    getInventory(skuCode?: string): Observable<any> {
-        const url = skuCode ? `${this.apiUrl}/${skuCode}` : this.apiUrl;
-        return this.http.get<any>(url);
+    getInventory(skuCode?: string): Observable<InventoryItem[]> {
+        // If skuCode provided, check specific (backend api matches?) - actually backend get take list param.
+        // For now, if no skuCode, call /all
+        if (!skuCode) {
+            return this.http.get<any[]>(`${this.apiUrl}/all`).pipe(
+                map((items: any[]) => items.map((item: any) => ({
+                    skuCode: item.productName,
+                    quantity: item.quantity ?? 0,
+                    isInStock: item.isInStock
+                })))
+            );
+        }
+        // Fallback or specific check logic if needed
+        return this.http.get<any>(`${this.apiUrl}/${skuCode}`);
     }
 
     updateStock(skuCode: string, quantity: number): Observable<any> {

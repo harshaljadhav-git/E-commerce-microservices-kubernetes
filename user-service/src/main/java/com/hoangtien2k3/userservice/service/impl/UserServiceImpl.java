@@ -112,7 +112,7 @@ public class UserServiceImpl implements UserService {
     public Mono<JwtResponseMessage> login(Login signInForm) {
         return Mono.fromCallable(() -> {
             String usernameOrEmail = signInForm.getUsername();
-            boolean isEmail = usernameOrEmail.contains("@gmail.com");
+            boolean isEmail = usernameOrEmail.contains("@");
 
             UserDetails userDetails;
             if (isEmail) {

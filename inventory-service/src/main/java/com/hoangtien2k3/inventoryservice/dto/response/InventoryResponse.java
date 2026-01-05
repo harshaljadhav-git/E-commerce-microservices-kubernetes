@@ -9,4 +9,5 @@ import lombok.*;
 public class InventoryResponse {
     private String productName;
     private boolean isInStock;
+    private Integer quantity;
 }

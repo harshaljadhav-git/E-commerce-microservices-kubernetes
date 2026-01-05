@@ -47,6 +47,9 @@ public final class Order extends AbstractMappedEntity {
     @Column(name = "order_fee", columnDefinition = "decimal")
     private Double orderFee;
 
+    @Column(name = "quantity")
+    private Integer quantity;
+
     @Column(name = "product_id")
     private Integer productId;
 

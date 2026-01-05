@@ -13,10 +13,10 @@ import { InventoryService, InventoryItem } from '../../core/services/inventory.s
       <!-- Header -->
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <h1 class="text-3xl font-bold text-gray-900 tracking-tight">
+          <h1 class="text-3xl font-bold text-black tracking-tight">
             Product Inventory
           </h1>
-          <p class="text-gray-500 mt-1">Manage your catalog, stock levels, and pricing.</p>
+          <p class="text-gray-700 mt-1">Manage your catalog, stock levels, and pricing.</p>
         </div>
         <button class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-primary/30 hover:shadow-primary/40 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
           <i class="fas fa-plus"></i> New Product
@@ -26,15 +26,15 @@ import { InventoryService, InventoryItem } from '../../core/services/inventory.s
       <!-- Search & Filters -->
       <div class="bg-white p-2 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4 items-center">
         <div class="relative flex-1 w-full">
-            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-600"></i>
             <input type="text" placeholder="Search by SKU, Name or Category..." 
-            class="w-full pl-11 pr-4 py-3 bg-gray-50 border-transparent focus:bg-white focus:border-primary/20 focus:ring-4 focus:ring-primary/10 rounded-xl outline-none transition-all placeholder-gray-400 text-gray-700 font-medium">
+            class="w-full pl-11 pr-4 py-3 bg-gray-50 border-transparent focus:bg-white focus:border-primary/20 focus:ring-4 focus:ring-primary/10 rounded-xl outline-none transition-all placeholder-gray-600 text-black font-medium">
         </div>
         <div class="flex gap-2 w-full md:w-auto p-1">
-            <button class="flex-1 md:flex-none px-6 py-3 bg-gray-50 hover:bg-gray-100 text-gray-600 rounded-xl font-medium transition-colors border border-transparent hover:border-gray-200 flex items-center justify-center gap-2">
+            <button class="flex-1 md:flex-none px-6 py-3 bg-gray-50 hover:bg-gray-100 text-gray-800 rounded-xl font-medium transition-colors border border-transparent hover:border-gray-200 flex items-center justify-center gap-2">
                 <i class="fas fa-filter"></i> Filters
             </button>
-            <button class="flex-1 md:flex-none px-6 py-3 bg-gray-50 hover:bg-gray-100 text-gray-600 rounded-xl font-medium transition-colors border border-transparent hover:border-gray-200 flex items-center justify-center gap-2">
+            <button class="flex-1 md:flex-none px-6 py-3 bg-gray-50 hover:bg-gray-100 text-gray-800 rounded-xl font-medium transition-colors border border-transparent hover:border-gray-200 flex items-center justify-center gap-2">
                 <i class="fas fa-sort-amount-down"></i> Sort
             </button>
         </div>
@@ -54,10 +54,10 @@ import { InventoryService, InventoryItem } from '../../core/services/inventory.s
             <div class="space-y-4">
                 <div class="flex justify-between items-start">
                     <div>
-                        <h3 class="font-bold text-gray-900 text-lg leading-tight mb-1 group-hover:text-primary transition-colors">
+                        <h3 class="font-bold text-black text-lg leading-tight mb-1 group-hover:text-primary transition-colors">
                             {{ item.skuCode }}
                         </h3>
-                        <p class="text-sm text-gray-500 font-medium">Electronics</p>
+                        <p class="text-sm text-gray-700 font-medium">Electronics</p>
                     </div>
                     <span class="font-bold text-primary bg-primary/5 px-3 py-1 rounded-lg text-sm">
                         $999.00
@@ -81,7 +81,7 @@ import { InventoryService, InventoryItem } from '../../core/services/inventory.s
                            {{ item.quantity > 0 ? item.quantity + ' in stock' : 'Out of Stock' }}
                         </span>
                     </div>
-                    <span class="text-xs font-mono text-gray-400 bg-gray-50 px-2 py-1 rounded">
+                    <span class="text-xs font-mono text-gray-600 bg-gray-50 px-2 py-1 rounded">
                         SKU: {{item.skuCode}}
                     </span>
                 </div>
@@ -89,7 +89,7 @@ import { InventoryService, InventoryItem } from '../../core/services/inventory.s
             
             <!-- Hover Action Overlay -->
             <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-200 translate-x-2 group-hover:translate-x-0">
-                <button class="w-8 h-8 rounded-full bg-white shadow-md text-gray-400 hover:text-primary flex items-center justify-center transition-colors">
+                <button class="w-8 h-8 rounded-full bg-white shadow-md text-gray-600 hover:text-primary flex items-center justify-center transition-colors">
                     <i class="fas fa-ellipsis-v text-xs"></i>
                 </button>
             </div>
@@ -101,8 +101,8 @@ import { InventoryService, InventoryItem } from '../../core/services/inventory.s
                 <i class="fas fa-plus text-2xl text-gray-400 group-hover:text-primary"></i>
             </div>
             <div>
-                <h3 class="font-bold text-gray-900">Add New Product</h3>
-                <p class="text-sm text-gray-500 mt-1">Create a new SKU entry</p>
+                <h3 class="font-bold text-black">Add New Product</h3>
+                <p class="text-sm text-gray-700 mt-1">Create a new SKU entry</p>
             </div>
         </div>
 

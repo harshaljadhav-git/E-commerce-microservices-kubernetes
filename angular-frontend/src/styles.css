@@ -9,8 +9,8 @@
   --danger: #EF4444;
   --dark: #F8FAFC;
   --glass: rgba(255, 255, 255, 0.8);
-  --text-main: #1E293B;
-  --text-muted: #64748B;
+  --text-main: #000000;
+  --text-muted: #374151;
 }
 
 body {
@@ -41,8 +41,15 @@ body {
 
 /* Animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .animate-float {
@@ -56,14 +63,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e293b; 
+  background: #1e293b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #475569; 
+  background: #475569;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b; 
+  background: #64748b;
 }

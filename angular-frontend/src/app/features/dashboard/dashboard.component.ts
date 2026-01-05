@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-dashboard',
-    standalone: true,
-    imports: [CommonModule],
-    template: `
+  selector: 'app-dashboard',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
     <div class="space-y-6">
-      <h2 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+      <h2 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-black to-grey-400">
         System Overview
       </h2>
       
@@ -23,7 +23,7 @@ import { CommonModule } from '@angular/common';
               <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
           </div>
-          <div class="text-gray-400 text-sm">System Health</div>
+          <div class="text-black-400 text-sm">System Health</div>
           <div class="text-2xl font-bold text-white mt-1">98.5%</div>
         </div>
 
@@ -35,7 +35,7 @@ import { CommonModule } from '@angular/common';
             </div>
             <span class="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">+12%</span>
           </div>
-          <div class="text-gray-400 text-sm">Total Requests</div>
+          <div class="text-black-400 text-sm">Total Requests</div>
           <div class="text-2xl font-bold text-white mt-1">1.2M</div>
         </div>
       </div>

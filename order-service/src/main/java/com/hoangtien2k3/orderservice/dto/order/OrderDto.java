@@ -38,6 +38,7 @@ public class OrderDto implements Serializable {
 
     private String orderDesc;
     private Double orderFee;
+    private Integer quantity;
 
     private Integer productId;
 

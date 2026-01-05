@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { PaymentService, Payment } from '../../core/services/payment.service';
 
 @Component({
-    selector: 'app-payment-list',
-    standalone: true,
-    imports: [CommonModule],
-    template: `
+  selector: 'app-payment-list',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
     <div class="space-y-6 animate-float">
       <div class="flex items-center justify-between">
         <h1 class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Transactions</h1>
@@ -16,7 +16,7 @@ import { PaymentService, Payment } from '../../core/services/payment.service';
         <table class="w-full text-left">
           <thead class="bg-white/5 text-gray-400 text-xs uppercase font-medium">
             <tr>
-              <th class="px-6 py-4">Transaction ID</th>
+              <th class="px-6 py-4">Payment ID</th>
               <th class="px-6 py-4">Order ID</th>
               <th class="px-6 py-4">Amount</th>
               <th class="px-6 py-4">Status</th>
@@ -24,9 +24,9 @@ import { PaymentService, Payment } from '../../core/services/payment.service';
           </thead>
           <tbody class="divide-y divide-white/10">
             <tr *ngFor="let payment of payments" class="hover:bg-white/5 transition-colors">
-              <td class="px-6 py-4 text-white font-mono text-sm">{{payment.transactionId}}</td>
+              <td class="px-6 py-4 text-white font-mono text-sm">#{{payment.paymentId}}</td>
               <td class="px-6 py-4 text-gray-400">#{{payment.orderId}}</td>
-              <td class="px-6 py-4 text-white font-mono">{{payment.amount | currency}}</td>
+              <td class="px-6 py-4 text-white font-mono">{{payment.orderDto?.orderFee || 0 | currency}}</td>
               <td class="px-6 py-4">
                 <span class="px-2 py-1 rounded text-xs font-medium"
                 [ngClass]="{
@@ -48,18 +48,32 @@ import { PaymentService, Payment } from '../../core/services/payment.service';
     `
 })
 export class PaymentListComponent implements OnInit {
-    private paymentService = inject(PaymentService);
-    payments: Payment[] = [];
+  private paymentService = inject(PaymentService);
+  payments: Payment[] = [];
 
-    ngOnInit() {
-        this.paymentService.getPayments().subscribe({
-            next: (data) => this.payments = Array.isArray(data) ? data : [],
-            error: () => {
-                this.payments = [
-                    { id: 1, orderId: 101, amount: 299.99, paymentStatus: 'SUCCESS', transactionId: 'TXN-998822' },
-                    { id: 2, orderId: 102, amount: 50.00, paymentStatus: 'FAILED', transactionId: 'TXN-112233' }
-                ];
-            }
-        });
-    }
+  ngOnInit() {
+    this.paymentService.getPayments().subscribe({
+      next: (data) => this.payments = Array.isArray(data) ? data : [],
+      error: () => {
+        this.payments = [
+          {
+            paymentId: 1,
+            orderId: 101,
+            userId: 1,
+            paymentStatus: 'SUCCESS',
+            isPayed: true,
+            orderDto: { orderFee: 299.99 }
+          },
+          {
+            paymentId: 2,
+            orderId: 102,
+            userId: 2,
+            paymentStatus: 'FAILED',
+            isPayed: false,
+            orderDto: { orderFee: 50.00 }
+          }
+        ];
+      }
+    });
+  }
 }

@@ -79,6 +79,21 @@ public class InventoryService {
                         InventoryResponse.builder()
                                 .productName(inventory.getProductName())
                                 .isInStock(inventory.getQuantity() > 0)
+                                .quantity(inventory.getQuantity())
+                                .build()
+                ).toList();
+    }
+
+    @Transactional(readOnly = true)
+    public List<InventoryResponse> getAllInventory() {
+        log.info("Fetching all inventory items");
+        return inventoryRepository.findAll()
+                .stream()
+                .map(inventory ->
+                        InventoryResponse.builder()
+                                .productName(inventory.getProductName())
+                                .isInStock(inventory.getQuantity() > 0)
+                                .quantity(inventory.getQuantity())
                                 .build()
                 ).toList();
     }

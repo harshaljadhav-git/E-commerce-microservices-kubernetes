@@ -131,9 +131,9 @@ export class ProductListComponent implements OnInit {
       error: () => {
         // Fallback mock data
         this.products = [
-          { id: 1, productTitle: 'Neon Cyber Deck', sku: 'CP-2077', priceUnit: 299.99, quantity: 45, description: 'High performance deck', imageUrl: '' },
-          { id: 2, productTitle: 'Quantum Processor', sku: 'QP-9000', priceUnit: 899.50, quantity: 5, description: 'Next gen computing', imageUrl: '' },
-          { id: 3, productTitle: 'Holographic Display', sku: 'HD-4K', priceUnit: 450.00, quantity: 120, description: '3D projection unit', imageUrl: '' },
+          { productId: 1, productTitle: 'Neon Cyber Deck', sku: 'CP-2077', priceUnit: 299.99, quantity: 45, description: 'High performance deck', imageUrl: '' },
+          { productId: 2, productTitle: 'Quantum Processor', sku: 'QP-9000', priceUnit: 899.50, quantity: 5, description: 'Next gen computing', imageUrl: '' },
+          { productId: 3, productTitle: 'Holographic Display', sku: 'HD-4K', priceUnit: 450.00, quantity: 120, description: '3D projection unit', imageUrl: '' },
         ];
       }
     });

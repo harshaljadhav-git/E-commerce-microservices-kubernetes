@@ -21,10 +21,17 @@ export class AuthService {
     constructor() { }
 
     login(credentials: any): Observable<any> {
-        return this.http.post(`${this.apiUrl}/login`, credentials).pipe(
+        // Backend expects 'username', but frontend form uses 'email'
+        const payload = {
+            username: credentials.email, // Map email to username
+            password: credentials.password
+        };
+
+        return this.http.post(`${this.apiUrl}/login`, payload).pipe(
             tap((response: any) => {
-                if (response.token) {
-                    localStorage.setItem('jwtToken', response.token);
+                // Backend returns 'access_token'
+                if (response.access_token) {
+                    localStorage.setItem('jwtToken', response.access_token);
                     this.currentUserSubject.next(this.getUserFromToken());
                 }
             })

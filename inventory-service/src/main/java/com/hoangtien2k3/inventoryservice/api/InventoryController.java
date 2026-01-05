@@ -36,7 +36,16 @@ public class InventoryController {
             log.info("Received inventory check request for skuCode: {}", productName);
             return inventoryService.isInStock(productName);
         }
-        return List.of(new InventoryResponse(null, false));
+        return List.of(new InventoryResponse(null, false, 0));
+    }
+
+    @GetMapping("/all")
+    @ResponseStatus(HttpStatus.OK)
+    public List<InventoryResponse> getAllInventory(@RequestHeader(name = "Authorization") String authorizationHeader) {
+        if (jwtValidate.validateTokenUserService(authorizationHeader)) {
+            return inventoryService.getAllInventory();
+        }
+        return List.of();
     }
 
     @ResponseStatus(HttpStatus.OK)

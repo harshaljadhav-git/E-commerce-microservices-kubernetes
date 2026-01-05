@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Product {
-    id?: number;
+    productId?: number;
     productTitle: string;
     sku: string;
     priceUnit: number;
