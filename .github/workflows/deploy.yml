@@ -145,6 +145,6 @@ jobs:
 #       run: |
 #         # Update the image tag in your deployment files dynamically or use Helm
 #         # For this example, we simply apply the existing manifests
-        kubectl apply -f api-gateway/kubernetes/deployment.yaml
-        kubectl apply -f api-gateway/kubernetes/service.yaml
+#        kubectl apply -f api-gateway/kubernetes/deployment.yaml
+#        kubectl apply -f api-gateway/kubernetes/service.yaml
         # Repeat for other services or write a script to loop through folders
